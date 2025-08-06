@@ -1,3 +1,11 @@
+This folders stores both lists and sentence list for single blocks.
+
+
+Lists are json fiules organized as in the following example:
+
+
+
+
 ```JSON
 {
     "item": "101",

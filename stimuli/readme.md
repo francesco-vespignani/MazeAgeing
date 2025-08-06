@@ -13,7 +13,7 @@ Example:
 ```json
 { 
     "listA": {
-        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/pract.json",
+        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockP.json",
         "blocks": [
             "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block1.json",
             "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block2.json",
@@ -21,7 +21,7 @@ Example:
         ]
     },
     "listB": {
-        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/pract.json",
+        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockP.json",
         "blocks": [
             "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block1.json",
             "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block2.json",
@@ -33,7 +33,7 @@ Example:
 ## Blocks
 
 
-Blocks are json files roganized as an array of the following elements:
+Blocks file names should always start with "blcok" and are json files organized as an array of the following elements:
 
 ```JSON
 {
@@ -59,5 +59,5 @@ Blocks are json files roganized as an array of the following elements:
   }
 ```
 
-reps is an array with an arbirìtrary numer of repetition of the same sentence that will be presented word by word with the corresponding distracters (distra filed). the element "side" specifyies on which side of the screen (0 left, 1 right) the correct word is to be presented. 
+item is itame number,  cond is condition and reps is an array with an arbirìtrary numer of repetition of the same sentence (named as target) that will be presented word by word with the corresponding distracters (distra filed). The element "side" specifyies on which side of the screen (0 left, 1 right) the correct word is expected to be presented. 
 

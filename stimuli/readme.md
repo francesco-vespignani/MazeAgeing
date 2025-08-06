@@ -1,10 +1,39 @@
+# Stimuli for maze repetition task to stduy language progessing in ageing
+
 This folders stores both lists and sentence list for single blocks.
 
+## Lists
 
-Lists are json fiules organized as in the following example:
+Lists are json files organized as in the following example,each element is a different listand the software can either pick a specific list or randomly choose among them.
+
+Each list has a "practice" element and an array of blocks.  Each elements refers to a specific file (with the format specifiyed below)  that can be directly loaded.  In the case you want to refer to a specific version (and not to the current version in the main tread)  you can change the link to refer to a blob in a spcific tread and version...  see github documentation.
+
+Example:
+
+```json
+{ 
+    "listA": {
+        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/pract.json",
+        "blocks": [
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block1.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block2.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockA.json"
+        ]
+    },
+    "listB": {
+        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/pract.json",
+        "blocks": [
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block1.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block2.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockB.json"
+        ]
+    }
+}
+```
+## Blocks
 
 
-
+Blocks are json files roganized as an array of the following elements:
 
 ```JSON
 {
@@ -29,3 +58,6 @@ Lists are json fiules organized as in the following example:
     ]
   }
 ```
+
+reps is an array with an arbirìtrary numer of repetition of the same sentence that will be presented word by word with the corresponding distracters (distra filed). the element "side" specifyies on which side of the screen (0 left, 1 right) the correct word is to be presented. 
+

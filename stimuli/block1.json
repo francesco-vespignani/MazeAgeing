@@ -1,0 +1,45 @@
+[
+  {
+    "item": "101",
+    "cond": "AAT",
+    "reps": [
+      {
+        "target": "IL GALLO CANTA.",
+        "distra": "OP LNDEO FENOM.",
+        "side": "1 1 0"
+      },
+           {
+        "target": "IL GALLO CANTA.",
+        "distra": "GE PPILO DMNEO.",
+        "side": "0 1 0"
+      },
+           {
+        "target": "IL GALLO CANTA.",
+        "distra": "MO OGMID CEVOM.",
+        "side": "0 0 1"
+      }    
+    ]
+  },
+    {
+    "item": "102",
+    "cond": "AAT",
+    "reps": [
+      {
+        "target": "LA PICCOLA PARLA GIÀ.",
+        "distra": "IM GARTEID VRODI IME.",
+        "side": "0 0 1 0"
+      },
+            {
+        "target": "LA PICCOLA PARLA GIÀ.",
+        "distra": "ED ORDOGIR REGAM OGI.",
+        "side": "1 1 0 0"
+      },
+            {
+        "target": "LA PICCOLA PARLA GIÀ.",
+        "distra": "EF DAFRAMO PLIOD DEN.",
+        "side": "1 0 1 0"
+      }    
+    ]
+  }
+
+]

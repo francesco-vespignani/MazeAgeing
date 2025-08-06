@@ -1,0 +1,44 @@
+[
+  {
+    "item": "301",
+    "cond": "SYV",
+    "reps": [
+      {
+        "target": "IL CANE CORRONO NEL PRATO.",
+        "distra": "OL ELIP LZOEGPI VOP LEFTE.",
+        "side": "0 0 1 1 0 1"
+      },
+    {
+        "target": "IL CANE CORRONO NEL PRATO.",
+        "distra": "PI EOLV GASPOIG OPV ELRTO.",
+        "side": "1 0 0 1 1 1"
+    },
+    {
+        "target": "IL CANE CORRONO NEL PRATO.",
+        "distra": "IP LIIB PLEOBIT OPT VBIOR.",
+        "side": "1 0 1 1 0 0"
+    }      
+    ]
+  },
+  {
+    "item": "302",
+    "cond": "SYC",
+    "reps": [
+    {
+        "target": "IL GIOCATORE SBAGLIA DI GROSSO.",
+        "distra": "MO LPIOBADAE OCIVDLE UM VECNIM.",
+        "side": "1 0 1 1 0 1"
+    },
+    {
+        "target": "IL GIOCATORE SBAGLIA DI GROSSO.",
+        "distra": "IR VOGOLIEDI PPLOIFE FI OPTNOR.",
+        "side": "1 1 0 0 1 1"
+    },
+    {
+        "target": "IL GIOCATORE SBAGLIA DI GROSSO.",
+        "distra": "PA ERIGNTOAI VORATIT OF FSIABE.",
+        "side": "0 0 0 1 1 0"
+    }
+    ]
+  }
+]

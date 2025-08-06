@@ -1,0 +1,14 @@
+{ 
+    "listA": {
+        "practice": "pract.json",
+        "block1": "block1.json",
+        "block2": "block2.json",
+        "block3": "blockA.json"
+    },
+    "listB": {
+        "practice": "pract.json",
+        "block1": "block1.json",
+        "block2": "block2.json",
+        "block3": "blockB.json"
+    }
+}

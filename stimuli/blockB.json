@@ -1,0 +1,44 @@
+[
+  {
+    "item": "301",
+    "cond": "SYC",
+    "reps": [
+      {
+        "target": "I CANI CORRONO NEL PRATO.",
+        "distra": "U FUGI CBEFFEI IPL GVPEA.",
+        "side": "1 1 0 1 0 0"
+      },
+    {
+        "target": "I CANI CORRONO NEL PRATO.",
+        "distra": "U POIL GEEFDAR IPL ERALT.",
+        "side": "0 1 0 1 0 1"
+    },
+    {
+        "target": "I CANI CORRONO NEL PRATO.",
+        "distra": "U TOTE ERPULIT DPE TNOFO.",
+        "side": "0 1 1 1 0 0"
+    }      
+    ]
+  },
+  {
+    "item": "302",
+    "cond": "SYV",
+    "reps": [
+    {
+        "target": "I GIOCATORI SBAGLIA DI GROSSO.",
+        "distra": "U DIAFFOBEU TGIQADE OP MANRDA.",
+        "side": "0 1 1 0 0 1"
+    },
+    {
+        "target": "I GIOCATORI SBAGLIA DI GROSSO.",
+        "distra": "U COROANDAE TEMIDSA FE REDODM.",
+        "side": "1 0 1 0 1 1"
+    },
+    {
+        "target": "I GIOCATORI SBAGLIA DI GROSSO.",
+        "distra": "U IOFRENDEA RDOTOUP OM GUNULT.",
+        "side": "0 1 0 1 0 0"
+    }
+    ]
+  }
+]

@@ -1,14 +1,18 @@
 { 
     "listA": {
-        "practice": "pract.json",
-        "block1": "block1.json",
-        "block2": "block2.json",
-        "block3": "blockA.json"
+        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/pract.json",
+        "blocks": [
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block1.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block2.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockA.json"
+        ]
     },
     "listB": {
-        "practice": "pract.json",
-        "block1": "block1.json",
-        "block2": "block2.json",
-        "block3": "blockB.json"
+        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/pract.json",
+        "blocks": [
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block1.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/block2.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockB.json"
+        ]
     }
 }

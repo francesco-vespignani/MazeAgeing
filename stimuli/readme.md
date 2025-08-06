@@ -6,7 +6,7 @@ This folders stores both lists and sentence list for single blocks.
 
 Lists are json files organized as in the following example,each element is a different listand the software can either pick a specific list or randomly choose among them.
 
-Each list has a "practice" element and an array of blocks.  Each elements refers to a specific file (with the format specifiyed below)  that can be directly loaded.  In the case you want to refer to a specific version (and not to the current version in the main tread)  you can change the link to refer to a blob in a spcific tread and version...  see github documentation.
+Each list has a "practice" element and an array of blocks.  Each elements refers to a link to a specific raw file stored on github, or elesewhere with the format specifiyed below, this liks should be always public avalilable to be loaded by the presentation software.  In the case you want to refer to a specific version (and not to the current version in the main tread)  you can change the link to refer to a blob in a spcific tread and version...  see github documentation.
 
 Example:
 

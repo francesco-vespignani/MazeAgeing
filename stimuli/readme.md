@@ -1,4 +1,4 @@
-# Stimuli for maze repetition task to stduy language progessing in ageing
+# Stimuli for maze repetition task to stduy language processing in ageing
 
 This folders stores both lists and sentence list for single blocks.
 

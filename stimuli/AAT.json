@@ -3,7 +3,6 @@
     "item": 1,
     "cond": "AAT",
     "reps": [
-      [
         {
           "target": "IL GALLO CANTA",
           "distractor": "GU FMELI GIPUL",
@@ -24,13 +23,11 @@
           "side": "1 0 1"
         }
       ]
-    ]
   },
   {
     "item": 2,
     "cond": "AAT",
     "reps": [
-      [
         {
           "target": "LA PICCOLA PARLA GIÀ",
           "distractor": "IM BQUBGOI VHOTA DEP",
@@ -51,13 +48,11 @@
           "side": "1 1 0 0"
         }
       ]
-    ]
   },
   {
     "item": 3,
     "cond": "AAT",
     "reps": [
-      [
         {
           "target": "SIAMO STATI INVITATI DA LUI",
           "distractor": "EUUST PUMXA EDSUQEDI IN ADO",
@@ -77,7 +72,6 @@
           "distractor": "EUVXI TSVAU VAPUICUN DE OCE",
           "side": "0 0 1 0 0"
         }
-      ]
     ]
   }
 ]

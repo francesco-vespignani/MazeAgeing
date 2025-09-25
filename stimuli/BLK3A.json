@@ -1,0 +1,56 @@
+[
+  {
+    "item": 1,
+    "cond": "SYV",
+    "reps": [
+      [
+        {
+          "target": "I CANI CORRE VELOCE",
+          "distractor": "U SECA RVNOE ANXIER",
+          "side": "0 1 1 0"
+        }
+      ],
+      [
+        {
+          "target": "I CANI CORRE VELOCE",
+          "distractor": "U HUGU MOMZU EICSQA",
+          "side": "1 0 1 0"
+        }
+      ],
+      [
+        {
+          "target": "I CANI CORRE VELOCE",
+          "distractor": "U AASB PAUNP ISGOIP",
+          "side": "0 0 0 0"
+        }
+      ]
+    ]
+  },
+  {
+    "item": 2,
+    "cond": "SYC",
+    "reps": [
+      [
+        {
+          "target": "LA RAGAZZA CANTA BENE",
+          "distractor": "ER RMIQEEF XOTGI IODX",
+          "side": "0 0 0 1"
+        }
+      ],
+      [
+        {
+          "target": "LA RAGAZZA CANTA BENE",
+          "distractor": "IP HOUODTT UVTBA HODO",
+          "side": "1 1 0 1"
+        }
+      ],
+      [
+        {
+          "target": "LA RAGAZZA CANTA BENE",
+          "distractor": "PI HFEEEBV SETRU ZUPU",
+          "side": "0 1 1 0"
+        }
+      ]
+    ]
+  }
+]

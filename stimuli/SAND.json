@@ -1,0 +1,164 @@
+[
+  {
+    "item": 1,
+    "cond": "SAND",
+    "reps": [
+      [
+        {
+          "target": "IL TRENO CORRE SUI BINARI",
+          "distractor": "BE IZIZG LEUBL DAE NESOOS",
+          "side": "1 0 1 0 1"
+        }
+      ],
+      [
+        {
+          "target": "IL TRENO CORRE SUI BINARI",
+          "distractor": "AD GLACI UURNF OSU OINBBO",
+          "side": "1 0 1 1 1"
+        }
+      ],
+      [
+        {
+          "target": "IL TRENO CORRE SUI BINARI",
+          "distractor": "VO TXZUA AGAPB OUH AQOTMI",
+          "side": "0 1 1 1 1"
+        }
+      ]
+    ]
+  },
+  {
+    "item": 2,
+    "cond": "SAND",
+    "reps": [
+      [
+        {
+          "target": "UN ASTRONOMO OSSERVA LE PIANTE",
+          "distractor": "XE IIALIFVNG MUXEXRI UT EZUEFN",
+          "side": "0 1 0 1 0"
+        }
+      ],
+      [
+        {
+          "target": "UN ASTRONOMO OSSERVA LE PIANTE",
+          "distractor": "EM QGVSUEHOO BOABQRI NI RIPVOE",
+          "side": "0 0 0 0 1"
+        }
+      ],
+      [
+        {
+          "target": "UN ASTRONOMO OSSERVA LE PIANTE",
+          "distractor": "IS GRAZNPOUA VAIASBN ZI XIIDFE",
+          "side": "1 0 0 0 0"
+        }
+      ]
+    ]
+  },
+  {
+    "item": 3,
+    "cond": "SAND",
+    "reps": [
+      [
+        {
+          "target": "LA BAMBINA CHE ERA SUL PRATO VIDE UNA FARFALLA POSARSI SU UN ALBERO",
+          "distractor": "IQ IOTUHNM CNI SIU PLE VIIRX QRIU AHA QUMRUOMF XAADETR HI GA QAEITQ",
+          "side": "1 0 1 0 1 0 0 0 1 0 1 0 1"
+        }
+      ],
+      [
+        {
+          "target": "LA BAMBINA CHE ERA SUL PRATO VIDE UNA FARFALLA POSARSI SU UN ALBERO",
+          "distractor": "TA ZGAEMFU NSO HIA PEM OCXNE UFUC UUR VCOXIUZH FCAEXQU IR IQ GEOALS",
+          "side": "1 0 1 0 1 1 0 0 1 0 0 1 1"
+        }
+      ],
+      [
+        {
+          "target": "LA BAMBINA CHE ERA SUL PRATO VIDE UNA FARFALLA POSARSI SU UN ALBERO",
+          "distractor": "OP RCATTAU MQA BOI ABD QSONO AEPV OAC VIAMUMPZ ZORUREH RA AR UTFUZO",
+          "side": "0 0 1 0 1 0 0 1 0 0 0 1 0"
+        }
+      ]
+    ]
+  },
+  {
+    "item": 4,
+    "cond": "SAND",
+    "reps": [
+      [
+        {
+          "target": "APPENA ENTRATI NELLA STANZA BUIA ABBIAMO CERCATO UN INTERRUTTORE PER ACCENDERE LA LUCE",
+          "distractor": "QASGEI FPTIQUI XGDAE OLHIPZ ALUE IQVOUID ZRUEECL AC GXEVMOXNAQOI XXO OUHXEVETQ QE AGDI",
+          "side": "1 1 0 0 0 1 1 1 0 0 0 1 1"
+        }
+      ],
+      [
+        {
+          "target": "APPENA ENTRATI NELLA STANZA BUIA ABBIAMO CERCATO UN INTERRUTTORE PER ACCENDERE LA LUCE",
+          "distractor": "UAROTV TMBIOBA IOQRX GXENRE LUEI UGUMOPU OEMFODM IR QAQZVELNUDIO OMP EHOMIXUMD OV DOHU",
+          "side": "1 1 1 1 0 1 1 0 1 1 1 0 0"
+        }
+      ],
+      [
+        {
+          "target": "APPENA ENTRATI NELLA STANZA BUIA ABBIAMO CERCATO UN INTERRUTTORE PER ACCENDERE LA LUCE",
+          "distractor": "EIBEGH RDHXOIO EPIPZ CBBEIC AVOO IOXURGI FUQRIAM ZA ONQUUBXOUCRQ ZOM TFZAAFXUA ES UPOG",
+          "side": "1 0 0 1 0 0 1 1 0 1 0 1 0"
+        }
+      ]
+    ]
+  },
+  {
+    "item": 5,
+    "cond": "SAND",
+    "reps": [
+      [
+        {
+          "target": "IL CALCIATORE CHE HA FATTO UN BRUTTO FALLO È STATO AMMONITO DALUN ARBITRO",
+          "distractor": "XU ZHDXIUIVEE BOV GE DHBIO HI TAUVQR DGUZO C ALHHO QIUUEHLG HAOLN VSNOAEH",
+          "side": "0 0 0 1 1 1 0 0 0 1 0 0 0"
+        }
+      ],
+      [
+        {
+          "target": "IL CALCIATORE CHE HA FATTO UN BRUTTO FALLO È STATO AMMONITO DALUN ARBITRO",
+          "distractor": "TO ZEESRXOBOA OGG UV POGIB CE BVMIEQ XVLAA V OFQXU UIAVSQOC ETFUB AHEULLR",
+          "side": "0 0 1 1 0 1 1 1 0 1 0 1 0"
+        }
+      ],
+      [
+        {
+          "target": "IL CALCIATORE CHE HA FATTO UN BRUTTO FALLO È STATO AMMONITO DALUN ARBITRO",
+          "distractor": "AP AFLMUUTOEP XEG BE DTURE UQ RMUPQU ZBIIP B QSUON NUTABICO PQOOT ISUZSAX",
+          "side": "1 0 0 1 1 0 1 1 1 0 0 0 0"
+        }
+      ]
+    ]
+  },
+  {
+    "item": 6,
+    "cond": "SAND",
+    "reps": [
+      [
+        {
+          "target": "PRIMA DI METTERE IN MOTO LA SUA MACCHINA LUCA SI ALLACCIÒ LA SCARPA",
+          "distractor": "LFRUO DE XIBOHEL EC ANNE OM FEA UARBFDEC EMHI OG AOQNSFIZ EZ CIISQM",
+          "side": "1 1 0 1 0 0 1 1 0 0 1 0 0"
+        }
+      ],
+      [
+        {
+          "target": "PRIMA DI METTERE IN MOTO LA SUA MACCHINA LUCA SI ALLACCIÒ LA SCARPA",
+          "distractor": "ZLCOU RA AMIZVOV UL XDUE UB FUI UFGHREUF VAIC PU QNIEDARF AR QRANMO",
+          "side": "1 0 1 1 1 0 0 0 1 0 1 1 1"
+        }
+      ],
+      [
+        {
+          "target": "PRIMA DI METTERE IN MOTO LA SUA MACCHINA LUCA SI ALLACCIÒ LA SCARPA",
+          "distractor": "AQACL IC QVUUMFE UX NIPA IG AAB INMCRIVO LAUQ EV QVHCIIUD FA EEHTGS",
+          "side": "1 1 1 1 0 1 0 0 0 1 0 0 1"
+        }
+      ]
+    ]
+  }
+]

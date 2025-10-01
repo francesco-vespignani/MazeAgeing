@@ -1,65 +1,212 @@
 [
-  {
-    "item": 1,
-    "cond": "AAT",
-    "reps": [
-        {
-          "target": "IL GALLO CANTA",
-          "distractor": "GU FMELI GIPUL",
-          "side": "1 0 0"
-        },
-        {
-          "target": "IL GALLO CANTA",
-          "distractor": "EF EPBPU AQHUP",
-          "side": "0 1 0"
-        },
-        {
-          "target": "IL GALLO CANTA",
-          "distractor": "OS XUETQ BHBUU",
-          "side": "1 0 1"
-        }
-      ]
-  },
-  {
-    "item": 2,
-    "cond": "AAT",
-    "reps": [
-        {
-          "target": "LA PICCOLA PARLA GIÀ",
-          "distractor": "IM BQUBGOI VHOTA DEP",
-          "side": "0 0 1 0"
-        },
-        {
-          "target": "LA PICCOLA PARLA GIÀ",
-          "distractor": "UG ANOQOHB MSQIO ODB",
-          "side": "1 1 0 0"
-        },
-        {
-          "target": "LA PICCOLA PARLA GIÀ",
-          "distractor": "ES OLABTUG IRVOG ZSA",
-          "side": "1 1 0 0"
-        }
-      ]
-  },
-  {
-    "item": 3,
-    "cond": "AAT",
-    "reps": [
-        {
-          "target": "SIAMO STATI INVITATI DA LUI",
-          "distractor": "EUUST PUMXA EDSUQEDI IN ADO",
-          "side": "0 1 1 1 1"
-        },
-        {
-          "target": "SIAMO STATI INVITATI DA LUI",
-          "distractor": "AEUVN UFZOR AEDUEQDB FI EMI",
-          "side": "0 1 0 1 0"
-        },
-        {
-          "target": "SIAMO STATI INVITATI DA LUI",
-          "distractor": "EUVXI TSVAU VAPUICUN DE OCE",
-          "side": "0 0 1 0 0"
-        }
-    ]
-  }
+    {
+        "item": 1,
+        "cond": "AAT",
+        "reps": [
+            {
+                "target": "IL GALLO CANTA",
+                "distractor": "IR ROOSH GLAZA",
+                "side": "1 0 0"
+            },
+            {
+                "target": "IL GALLO CANTA",
+                "distractor": "UQ UMRHI TUVAD",
+                "side": "1 0 1"
+            },
+            {
+                "target": "IL GALLO CANTA",
+                "distractor": "TE ACEPH GBOQE",
+                "side": "0 0 0"
+            }
+        ]
+    },
+    {
+        "item": 2,
+        "cond": "AAT",
+        "reps": [
+            {
+                "target": "LA PICCOLA PARLA GI\u00c0",
+                "distractor": "HI LSEIUBN AMVUC RBE",
+                "side": "1 0 1 0"
+            },
+            {
+                "target": "LA PICCOLA PARLA GI\u00c0",
+                "distractor": "OR VUUMMFI VLBII BTA",
+                "side": "0 0 0 1"
+            },
+            {
+                "target": "LA PICCOLA PARLA GI\u00c0",
+                "distractor": "SA UFBCULE UUDZQ MUV",
+                "side": "1 1 0 1"
+            }
+        ]
+    },
+    {
+        "item": 3,
+        "cond": "AAT",
+        "reps": [
+            {
+                "target": "SIAMO STATI INVITATI DA LUI",
+                "distractor": "IEDAV ZUTER ABOOHIFR EZ OAC",
+                "side": "0 1 0 1 1"
+            },
+            {
+                "target": "SIAMO STATI INVITATI DA LUI",
+                "distractor": "RZUEI ILIBP ZLEUZAAS BE OOC",
+                "side": "0 0 1 1 0"
+            },
+            {
+                "target": "SIAMO STATI INVITATI DA LUI",
+                "distractor": "AOETC QECIG ZIHCEVEE RI UAH",
+                "side": "1 1 0 1 0"
+            }
+        ]
+    },
+    {
+        "item": 4,
+        "cond": "AAT",
+        "reps": [
+            {
+                "target": "IO NON TI PRESTO PI\u00d9 LA MOTO",
+                "distractor": "OA OTM UC OISMQR FBA AS UMLI",
+                "side": "0 1 1 0 1 1 0"
+            },
+            {
+                "target": "IO NON TI PRESTO PI\u00d9 LA MOTO",
+                "distractor": "AO ETV RE SNNIUF QER OZ ACAC",
+                "side": "1 0 1 1 0 1 1"
+            },
+            {
+                "target": "IO NON TI PRESTO PI\u00d9 LA MOTO",
+                "distractor": "EU BRA OL ECLFQA UBV NA LIGO",
+                "side": "0 1 0 1 1 0 1"
+            }
+        ]
+    },
+    {
+        "item": 5,
+        "cond": "AAT",
+        "reps": [
+            {
+                "target": "CARLO NON SI FA MAI TAGLIARE I CAPELLI",
+                "distractor": "USABS QAG MO DU MEA UHCUIQEN U ELDUMIB",
+                "side": "0 0 1 1 1 0 0 0"
+            },
+            {
+                "target": "CARLO NON SI FA MAI TAGLIARE I CAPELLI",
+                "distractor": "ZDEEN EPL FE AS SEO GECRDOAE U EHBSIPE",
+                "side": "1 0 0 1 1 0 1 1"
+            },
+            {
+                "target": "CARLO NON SI FA MAI TAGLIARE I CAPELLI",
+                "distractor": "DZFAO LON SA IS IUR TBEHIESO U DDBAICE",
+                "side": "1 0 1 0 0 1 1 0"
+            }
+        ]
+    },
+    {
+        "item": 6,
+        "cond": "AAT",
+        "reps": [
+            {
+                "target": "MI HA PROMESSO DI PASSARE OGGI STESSO",
+                "distractor": "CO HU OFFOOPNG ZE MQEUUHF BEAZ TUDPMA",
+                "side": "0 0 1 0 1 1 0"
+            },
+            {
+                "target": "MI HA PROMESSO DI PASSARE OGGI STESSO",
+                "distractor": "RE UM FPOOVGIS OV OANMLEV OSFU SDUILS",
+                "side": "1 0 1 1 1 0 0"
+            },
+            {
+                "target": "MI HA PROMESSO DI PASSARE OGGI STESSO",
+                "distractor": "AN IC CBNEEDGE RI BGALETU GUHU ASICLB",
+                "side": "0 1 1 1 0 1 0"
+            }
+        ]
+    },
+    {
+        "item": 7,
+        "cond": "AAT",
+        "reps": [
+            {
+                "target": "LUI NON \u00c8 AFFATTO FACILE DA ACCONTENTARE",
+                "distractor": "OTO VVA U TOUSGOM EEUSDZ EM QGDIOEMOZZPA",
+                "side": "0 1 1 1 0 0 1"
+            },
+            {
+                "target": "LUI NON \u00c8 AFFATTO FACILE DA ACCONTENTARE",
+                "distractor": "LEE HOT U UAQEBHF EBLZIU IZ ESTRGIRTTEAA",
+                "side": "1 0 1 0 1 0 1"
+            },
+            {
+                "target": "LUI NON \u00c8 AFFATTO FACILE DA ACCONTENTARE",
+                "distractor": "UTI ATM B DEASRLA LGREIA OT OEBPLURBAGSI",
+                "side": "1 1 0 0 1 0 1"
+            }
+        ]
+    },
+    {
+        "item": 8,
+        "cond": "AAT",
+        "reps": [
+            {
+                "target": "HA INCONTRATO AL SUPERMERCATO LA SUA VICINA CON UN CAPPOTTO NUOVO",
+                "distractor": "IP RIEZISAHHG UG AZALLVGDLEOI NU MAE OOGTGO NUM TA EMIZZFHO UAEBQ",
+                "side": "0 1 0 0 1 1 0 1 0 1 0"
+            },
+            {
+                "target": "HA INCONTRATO AL SUPERMERCATO LA SUA VICINA CON UN CAPPOTTO NUOVO",
+                "distractor": "MU HMSOACVHIU QU BSOHTIDAUZAR UL SOI OAHSUC TCO IB ZHAPABUR IGIDE",
+                "side": "0 1 1 0 1 1 0 1 0 1 0"
+            },
+            {
+                "target": "HA INCONTRATO AL SUPERMERCATO LA SUA VICINA CON UN CAPPOTTO NUOVO",
+                "distractor": "OC VNUIASVFSO AH OLONFNOFCIDU SO OBI LFBIEI LAT IT LPOFRIUH AMOIL",
+                "side": "1 1 0 0 0 0 1 0 1 1 0"
+            }
+        ]
+    },
+    {
+        "item": 9,
+        "cond": "AAT",
+        "reps": [
+            {
+                "target": "\u00c8 STATO DETTO CHE SEMPRE PI\u00d9 PERSONE BEVONO BIRRA",
+                "distractor": "G AZGQO OITTT DHU SIGAFQ SEQ OAUCDVG SZODOI HEBEQ",
+                "side": "1 0 1 1 0 0 1 1 1"
+            },
+            {
+                "target": "\u00c8 STATO DETTO CHE SEMPRE PI\u00d9 PERSONE BEVONO BIRRA",
+                "distractor": "G SHUNO OECQZ IQP ZCEACZ ROP GCVZIAI HSUPIE OIZRZ",
+                "side": "0 1 0 1 0 0 1 1 1"
+            },
+            {
+                "target": "\u00c8 STATO DETTO CHE SEMPRE PI\u00d9 PERSONE BEVONO BIRRA",
+                "distractor": "C MADPA OUBMQ REC SCRAUT UMN RAIDETQ CPUQAE EAZGV",
+                "side": "0 1 0 0 1 0 0 0 1"
+            }
+        ]
+    },
+    {
+        "item": 10,
+        "cond": "AAT",
+        "reps": [
+            {
+                "target": "LA SIGNORA CHE COMPR\u00d2 LA NOSTRA AUTO \u00c8 DA IERI AMMALATA",
+                "distractor": "IH HBOMLEU PMI VDOGPG EM DUUTMF EFIO N ET IQOA AQOFZEIN",
+                "side": "1 0 1 1 1 0 1 0 0 0 1"
+            },
+            {
+                "target": "LA SIGNORA CHE COMPR\u00d2 LA NOSTRA AUTO \u00c8 DA IERI AMMALATA",
+                "distractor": "AM LCUDHEI LOT FTMSUM OS DPSUOC UGAA S IB IERA SIUAAHPB",
+                "side": "1 0 1 1 1 0 0 1 1 0 1"
+            },
+            {
+                "target": "LA SIGNORA CHE COMPR\u00d2 LA NOSTRA AUTO \u00c8 DA IERI AMMALATA",
+                "distractor": "EN OQIOMSQ OCN ASHMCH EV CTOMSI OOUZ C CA OMOA OIOLOLDD",
+                "side": "1 1 0 1 0 0 0 0 1 1 1"
+            }
+        ]
+    }
 ]

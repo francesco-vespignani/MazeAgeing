@@ -1,0 +1,34 @@
+{ 
+    "listA1": {
+        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockP.json",
+        "blocks": [
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/AAT.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/SAND.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/BLK3A.json"
+        ]
+    },
+    "listB1": {
+        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockP.json",
+        "blocks": [
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/AAT.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/SAND.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/BLK3A.json"
+        ]
+    },
+    "listA2": {
+        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockP.json",
+        "blocks": [
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/AAT.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/SAND.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/BLK3A.json"
+        ]
+    },
+    "listB2": {
+        "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockP.json",
+        "blocks": [
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/AAT.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/SAND.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/BLK3A.json"
+        ]
+    }
+  }

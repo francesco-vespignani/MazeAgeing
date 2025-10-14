@@ -1,169 +1,22 @@
 [
     {
-        "item": 40,
-        "cond": "SYV",
-        "reps": [
-            {
-                "target": "LA FINESTRA TREMANO FORTE",
-                "distractor": "IM PIHIVPUD VAHDSIO ABRCU",
-                "side": "1 1 1 0"
-            },
-            {
-                "target": "LA FINESTRA TREMANO FORTE",
-                "distractor": "ME UHBULBAT GZIRAOT HSAIZ",
-                "side": "0 1 1 0"
-            },
-            {
-                "target": "LA FINESTRA TREMANO FORTE",
-                "distractor": "UP RBIPSUAP EEGVQGE UCREH",
-                "side": "1 0 1 0"
-            }
-        ]
-    },
-    {
-        "item": 42,
-        "cond": "SEC",
-        "reps": [
-            {
-                "target": "GLI ALUNNI ASCOLTANO SEMPRE",
-                "distractor": "IFL OOGTGO UTCARICPA CPHVOA",
-                "side": "0 1 0 0"
-            },
-            {
-                "target": "GLI ALUNNI ASCOLTANO SEMPRE",
-                "distractor": "LFU OAHSUC LGNADANIO ZFRHEO",
-                "side": "1 1 1 0"
-            },
-            {
-                "target": "GLI ALUNNI ASCOLTANO SEMPRE",
-                "distractor": "ABM LFBIEI OLBVQAINO CBUALG",
-                "side": "1 0 1 0"
-            }
-        ]
-    },
-    {
-        "item": 44,
-        "cond": "SEC",
-        "reps": [
-            {
-                "target": "LA SARTA STIRA DISTRATTA",
-                "distractor": "NA SOCTE PQIQA BDEFLLLEI",
-                "side": "1 0 1 1"
-            },
-            {
-                "target": "LA SARTA STIRA DISTRATTA",
-                "distractor": "AT DRZOE ZGAIC TSHMUEVPI",
-                "side": "1 0 1 0"
-            },
-            {
-                "target": "LA SARTA STIRA DISTRATTA",
-                "distractor": "FO ZAMFA TDTEA MTEVUIPSH",
-                "side": "0 1 1 0"
-            }
-        ]
-    },
-    {
-        "item": 45,
-        "cond": "SEV",
-        "reps": [
-            {
-                "target": "I SOLDATI CIGOLANO CORAGGIOSAMENTE",
-                "distractor": "U IFZCOOB AQAFUQOL HSHOMHUIICMAEEB",
-                "side": "0 1 0 1"
-            },
-            {
-                "target": "I SOLDATI CIGOLANO CORAGGIOSAMENTE",
-                "distractor": "U DEEQLAS FHEIMAIR GOFPUZOCIVAHNEU",
-                "side": "1 0 1 1"
-            },
-            {
-                "target": "I SOLDATI CIGOLANO CORAGGIOSAMENTE",
-                "distractor": "U EQECSSE AAPOUDGP BOZIOZNNGEINASU",
-                "side": "0 1 0 1"
-            }
-        ]
-    },
-    {
-        "item": 50,
-        "cond": "SEC",
-        "reps": [
-            {
-                "target": "IL CONDUCENTE STERZA IMPROVVISAMENTE",
-                "distractor": "OT RARGNOABEV POVFIN LGLFDEUUZHOQLII",
-                "side": "1 0 0 1"
-            },
-            {
-                "target": "IL CONDUCENTE STERZA IMPROVVISAMENTE",
-                "distractor": "DU DETUHDAZRU NNISVU IIZIACCHZLUTTIM",
-                "side": "1 1 0 0"
-            },
-            {
-                "target": "IL CONDUCENTE STERZA IMPROVVISAMENTE",
-                "distractor": "AH SUVUAMDLGU ABLBAD LUAUFRESUTSOPRR",
-                "side": "0 1 1 0"
-            }
-        ]
-    },
-    {
         "item": 49,
         "cond": "SEV",
         "reps": [
             {
-                "target": "IL CAPOTRENO GERMOGLIA FORTE",
-                "distractor": "OB ELUOTRGCE CUECODUVC AVZBE",
+                "target": "IL CAPOTRENO GERMOGLIA FORTE.",
+                "distractor": "OB ELUOTRGCE CUECODUVC AVZBE.",
                 "side": "0 1 1 0"
             },
             {
-                "target": "IL CAPOTRENO GERMOGLIA FORTE",
-                "distractor": "PE FLHAAZIVA CUFUELHEQ OAZVB",
+                "target": "IL CAPOTRENO GERMOGLIA FORTE.",
+                "distractor": "PE FLHAAZIVA CUFUELHEQ OAZVB.",
                 "side": "0 1 1 1"
             },
             {
-                "target": "IL CAPOTRENO GERMOGLIA FORTE",
-                "distractor": "RU SAVMRUUEF OCOICMMES OFIZB",
+                "target": "IL CAPOTRENO GERMOGLIA FORTE.",
+                "distractor": "RU SAVMRUUEF OCOICMMES OFIZB.",
                 "side": "0 0 0 1"
-            }
-        ]
-    },
-    {
-        "item": 32,
-        "cond": "SYV",
-        "reps": [
-            {
-                "target": "LE RAGAZZE CANTA BENE",
-                "distractor": "TO NUFLAME EOZCB DVIE",
-                "side": "0 0 1 0"
-            },
-            {
-                "target": "LE RAGAZZE CANTA BENE",
-                "distractor": "ZE DEQAPNU OSEMV RUCI",
-                "side": "0 0 0 1"
-            },
-            {
-                "target": "LE RAGAZZE CANTA BENE",
-                "distractor": "IS EZIOVGS ATZOG EBOT",
-                "side": "1 1 0 0"
-            }
-        ]
-    },
-    {
-        "item": 39,
-        "cond": "SYC",
-        "reps": [
-            {
-                "target": "IL BAMBINO GIOCA LONTANO",
-                "distractor": "ZO VBUFEEZ QIOCA DHZEIUB",
-                "side": "1 1 0 1"
-            },
-            {
-                "target": "IL BAMBINO GIOCA LONTANO",
-                "distractor": "EC IHSAMIT SEADA ECTBOIM",
-                "side": "0 1 0 1"
-            },
-            {
-                "target": "IL BAMBINO GIOCA LONTANO",
-                "distractor": "LI FDUBGUO ALIUN MACTOAL",
-                "side": "0 0 1 1"
             }
         ]
     },
@@ -172,19 +25,40 @@
         "cond": "SEC",
         "reps": [
             {
-                "target": "LO SPETTATORE APPLAUDE SORPRESO",
-                "distractor": "CA BSAARRZEOT OUNDOSAV CIGOMSSA",
+                "target": "LO SPETTATORE APPLAUDE SORPRESO.",
+                "distractor": "CA BSAARRZEOT OUNDOSAV CIGOMSSA.",
                 "side": "1 1 0 0"
             },
             {
-                "target": "LO SPETTATORE APPLAUDE SORPRESO",
-                "distractor": "OQ OHIPLIQESR AIACSBCE OOZOCFLP",
+                "target": "LO SPETTATORE APPLAUDE SORPRESO.",
+                "distractor": "OQ OHIPLIQESR AIACSBCE OOZOCFLP.",
                 "side": "0 0 0 1"
             },
             {
-                "target": "LO SPETTATORE APPLAUDE SORPRESO",
-                "distractor": "IV IARHGZHPOU AMAELFRO MRQCAQEA",
+                "target": "LO SPETTATORE APPLAUDE SORPRESO.",
+                "distractor": "IV IARHGZHPOU AMAELFRO MRQCAQEA.",
                 "side": "1 1 1 0"
+            }
+        ]
+    },
+    {
+        "item": 36,
+        "cond": "SYV",
+        "reps": [
+            {
+                "target": "IL GATTO SCAPPANO FUORI.",
+                "distractor": "EM UGQTA TZUETDPU MARAI.",
+                "side": "1 0 0 1"
+            },
+            {
+                "target": "IL GATTO SCAPPANO FUORI.",
+                "distractor": "OS QNALE ONPNCUHO ESBIE.",
+                "side": "1 0 1 0"
+            },
+            {
+                "target": "IL GATTO SCAPPANO FUORI.",
+                "distractor": "SI DURCA FZEOLOQH IOOND.",
+                "side": "0 0 1 1"
             }
         ]
     },
@@ -193,19 +67,61 @@
         "cond": "SEV",
         "reps": [
             {
-                "target": "LA BAMBINA PIOVE VELOCE",
-                "distractor": "US SIOUSNF HAOMO NOBIUP",
+                "target": "LA BAMBINA PIOVE VELOCE.",
+                "distractor": "US SIOUSNF HAOMO NOBIUP.",
                 "side": "1 0 1 0"
             },
             {
-                "target": "LA BAMBINA PIOVE VELOCE",
-                "distractor": "SI GOGQIIN OROBE OAVCTI",
+                "target": "LA BAMBINA PIOVE VELOCE.",
+                "distractor": "SI GOGQIIN OROBE OAVCTI.",
                 "side": "0 1 1 0"
             },
             {
-                "target": "LA BAMBINA PIOVE VELOCE",
-                "distractor": "EG VOMIENB OIZAS NIIALC",
+                "target": "LA BAMBINA PIOVE VELOCE.",
+                "distractor": "EG VOMIENB OIZAS NIIALC.",
                 "side": "1 1 0 0"
+            }
+        ]
+    },
+    {
+        "item": 44,
+        "cond": "SEC",
+        "reps": [
+            {
+                "target": "LA SARTA STIRA DISTRATTA.",
+                "distractor": "NA SOCTE PQIQA BDEFLLLEI.",
+                "side": "1 0 1 1"
+            },
+            {
+                "target": "LA SARTA STIRA DISTRATTA.",
+                "distractor": "AT DRZOE ZGAIC TSHMUEVPI.",
+                "side": "1 0 1 0"
+            },
+            {
+                "target": "LA SARTA STIRA DISTRATTA.",
+                "distractor": "FO ZAMFA TDTEA MTEVUIPSH.",
+                "side": "0 1 1 0"
+            }
+        ]
+    },
+    {
+        "item": 39,
+        "cond": "SYC",
+        "reps": [
+            {
+                "target": "IL BAMBINO GIOCA LONTANO.",
+                "distractor": "ZO VBUFEEZ QIOCA DHZEIUB.",
+                "side": "1 1 0 1"
+            },
+            {
+                "target": "IL BAMBINO GIOCA LONTANO.",
+                "distractor": "EC IHSAMIT SEADA ECTBOIM.",
+                "side": "0 1 0 1"
+            },
+            {
+                "target": "IL BAMBINO GIOCA LONTANO.",
+                "distractor": "LI FDUBGUO ALIUN MACTOAL.",
+                "side": "0 0 1 1"
             }
         ]
     },
@@ -214,39 +130,39 @@
         "cond": "SYC",
         "reps": [
             {
-                "target": "IL CANE CORRE VELOCE",
-                "distractor": "EL OROH EHAMP BQOEUQ",
+                "target": "IL CANE CORRE VELOCE.",
+                "distractor": "EL OROH EHAMP BQOEUQ.",
                 "side": "1 0 0 0"
             },
             {
-                "target": "IL CANE CORRE VELOCE",
-                "distractor": "HA GIZU GLAZA UTOVNA",
+                "target": "IL CANE CORRE VELOCE.",
+                "distractor": "HA GIZU GLAZA UTOVNA.",
                 "side": "1 0 1 1"
             },
             {
-                "target": "IL CANE CORRE VELOCE",
-                "distractor": "TE EICL TUVAD OCAOSF",
+                "target": "IL CANE CORRE VELOCE.",
+                "distractor": "TE EICL TUVAD OCAOSF.",
                 "side": "0 1 0 0"
             }
         ]
     },
     {
-        "item": 38,
-        "cond": "SYV",
+        "item": 43,
+        "cond": "SEV",
         "reps": [
             {
-                "target": "LA DONNA PARLANO PIANO",
-                "distractor": "PI SUQEN OMZHBAE MIUUZ",
-                "side": "1 0 1 0"
+                "target": "IL BAMBINO SQUILLA SPESSO.",
+                "distractor": "TO SIDUMPO QNOUHVU GGFTAE.",
+                "side": "0 1 1 1"
             },
             {
-                "target": "LA DONNA PARLANO PIANO",
-                "distractor": "OZ AGEST VTOSVIU AISEB",
-                "side": "0 0 1 1"
+                "target": "IL BAMBINO SQUILLA SPESSO.",
+                "distractor": "ZA ULHIAGF FAIOBQV LASLRE.",
+                "side": "0 0 0 1"
             },
             {
-                "target": "LA DONNA PARLANO PIANO",
-                "distractor": "OQ LBUTE ULMEQDA PSAIE",
+                "target": "IL BAMBINO SQUILLA SPESSO.",
+                "distractor": "OM EBUTMFU EEZPLOQ QLAEBG.",
                 "side": "1 0 1 0"
             }
         ]
@@ -256,19 +172,40 @@
         "cond": "SYV",
         "reps": [
             {
-                "target": "LA MAMMA DORMONO PRESTO",
-                "distractor": "EZ HNOAC NTAHRAA HUOTBP",
+                "target": "LA MAMMA DORMONO PRESTO.",
+                "distractor": "EZ HNOAC NTAHRAA HUOTBP.",
                 "side": "1 0 1 0"
             },
             {
-                "target": "LA MAMMA DORMONO PRESTO",
-                "distractor": "BE HAUBH TQAQPAO NUAFSS",
+                "target": "LA MAMMA DORMONO PRESTO.",
+                "distractor": "BE HAUBH TQAQPAO NUAFSS.",
                 "side": "1 1 0 0"
             },
             {
-                "target": "LA MAMMA DORMONO PRESTO",
-                "distractor": "RI CEDZE LRECGIU COCZIC",
+                "target": "LA MAMMA DORMONO PRESTO.",
+                "distractor": "RI CEDZE LRECGIU COCZIC.",
                 "side": "0 0 1 0"
+            }
+        ]
+    },
+    {
+        "item": 32,
+        "cond": "SYV",
+        "reps": [
+            {
+                "target": "LE RAGAZZE CANTA BENE.",
+                "distractor": "TO NUFLAME EOZCB DVIE.",
+                "side": "0 0 1 0"
+            },
+            {
+                "target": "LE RAGAZZE CANTA BENE.",
+                "distractor": "ZE DEQAPNU OSEMV RUCI.",
+                "side": "0 0 0 1"
+            },
+            {
+                "target": "LE RAGAZZE CANTA BENE.",
+                "distractor": "IS EZIOVGS ATZOG EBOT.",
+                "side": "1 1 0 0"
             }
         ]
     },
@@ -277,19 +214,103 @@
         "cond": "SYC",
         "reps": [
             {
-                "target": "IL PASSERO VOLA",
-                "distractor": "PE BLPIEPI CAAT",
+                "target": "IL PASSERO VOLA.",
+                "distractor": "PE BLPIEPI CAAT.",
                 "side": "1 0 0"
             },
             {
-                "target": "IL PASSERO VOLA",
-                "distractor": "OT TFTUEIC URUB",
+                "target": "IL PASSERO VOLA.",
+                "distractor": "OT TFTUEIC URUB.",
                 "side": "1 0 1"
             },
             {
-                "target": "IL PASSERO VOLA",
-                "distractor": "IB DEOOHZN EPHI",
+                "target": "IL PASSERO VOLA.",
+                "distractor": "IB DEOOHZN EPHI.",
                 "side": "1 1 0"
+            }
+        ]
+    },
+    {
+        "item": 38,
+        "cond": "SYV",
+        "reps": [
+            {
+                "target": "LA DONNA PARLANO PIANO.",
+                "distractor": "PI SUQEN OMZHBAE MIUUZ.",
+                "side": "1 0 1 0"
+            },
+            {
+                "target": "LA DONNA PARLANO PIANO.",
+                "distractor": "OZ AGEST VTOSVIU AISEB.",
+                "side": "0 0 1 1"
+            },
+            {
+                "target": "LA DONNA PARLANO PIANO.",
+                "distractor": "OQ LBUTE ULMEQDA PSAIE.",
+                "side": "1 0 1 0"
+            }
+        ]
+    },
+    {
+        "item": 45,
+        "cond": "SEV",
+        "reps": [
+            {
+                "target": "I SOLDATI CIGOLANO CORAGGIOSAMENTE.",
+                "distractor": "U IFZCOOB AQAFUQOL HSHOMHUIICMAEEB.",
+                "side": "0 1 0 1"
+            },
+            {
+                "target": "I SOLDATI CIGOLANO CORAGGIOSAMENTE.",
+                "distractor": "U DEEQLAS FHEIMAIR GOFPUZOCIVAHNEU.",
+                "side": "1 0 1 1"
+            },
+            {
+                "target": "I SOLDATI CIGOLANO CORAGGIOSAMENTE.",
+                "distractor": "U EQECSSE AAPOUDGP BOZIOZNNGEINASU.",
+                "side": "0 1 0 1"
+            }
+        ]
+    },
+    {
+        "item": 42,
+        "cond": "SEC",
+        "reps": [
+            {
+                "target": "GLI ALUNNI ASCOLTANO SEMPRE.",
+                "distractor": "IFL OOGTGO UTCARICPA CPHVOA.",
+                "side": "0 1 0 0"
+            },
+            {
+                "target": "GLI ALUNNI ASCOLTANO SEMPRE.",
+                "distractor": "LFU OAHSUC LGNADANIO ZFRHEO.",
+                "side": "1 1 1 0"
+            },
+            {
+                "target": "GLI ALUNNI ASCOLTANO SEMPRE.",
+                "distractor": "ABM LFBIEI OLBVQAINO CBUALG.",
+                "side": "1 0 1 0"
+            }
+        ]
+    },
+    {
+        "item": 40,
+        "cond": "SYV",
+        "reps": [
+            {
+                "target": "LA FINESTRA TREMANO FORTE.",
+                "distractor": "IM PIHIVPUD VAHDSIO ABRCU.",
+                "side": "1 1 1 0"
+            },
+            {
+                "target": "LA FINESTRA TREMANO FORTE.",
+                "distractor": "ME UHBULBAT GZIRAOT HSAIZ.",
+                "side": "0 1 1 0"
+            },
+            {
+                "target": "LA FINESTRA TREMANO FORTE.",
+                "distractor": "UP RBIPSUAP EEGVQGE UCREH.",
+                "side": "1 0 1 0"
             }
         ]
     },
@@ -298,82 +319,19 @@
         "cond": "SEC",
         "reps": [
             {
-                "target": "UNA INFERMIERA CURA TIMOROSA",
-                "distractor": "LOA TPIVUINOOB FTUO UCOECFBA",
+                "target": "UNA INFERMIERA CURA TIMOROSA.",
+                "distractor": "LOA TPIVUINOOB FTUO UCOECFBA.",
                 "side": "0 1 1 1"
             },
             {
-                "target": "UNA INFERMIERA CURA TIMOROSA",
-                "distractor": "ZIU HOLFVOOUIL ZEAG RBUAULIB",
+                "target": "UNA INFERMIERA CURA TIMOROSA.",
+                "distractor": "ZIU HOLFVOOUIL ZEAG RBUAULIB.",
                 "side": "1 0 0 0"
             },
             {
-                "target": "UNA INFERMIERA CURA TIMOROSA",
-                "distractor": "AEN BVEVBZEEUO OOQT ETQIOBCE",
+                "target": "UNA INFERMIERA CURA TIMOROSA.",
+                "distractor": "AEN BVEVBZEEUO OOQT ETQIOBCE.",
                 "side": "0 1 0 1"
-            }
-        ]
-    },
-    {
-        "item": 43,
-        "cond": "SEV",
-        "reps": [
-            {
-                "target": "IL BAMBINO SQUILLA SPESSO",
-                "distractor": "TO SIDUMPO QNOUHVU GGFTAE",
-                "side": "0 1 1 1"
-            },
-            {
-                "target": "IL BAMBINO SQUILLA SPESSO",
-                "distractor": "ZA ULHIAGF FAIOBQV LASLRE",
-                "side": "0 0 0 1"
-            },
-            {
-                "target": "IL BAMBINO SQUILLA SPESSO",
-                "distractor": "OM EBUTMFU EEZPLOQ QLAEBG",
-                "side": "1 0 1 0"
-            }
-        ]
-    },
-    {
-        "item": 37,
-        "cond": "SYC",
-        "reps": [
-            {
-                "target": "LA SEDIA STA QUI",
-                "distractor": "AS CEOOC GEQ UOT",
-                "side": "0 1 1 0"
-            },
-            {
-                "target": "LA SEDIA STA QUI",
-                "distractor": "CE SMEUA GEZ ELE",
-                "side": "1 0 0 0"
-            },
-            {
-                "target": "LA SEDIA STA QUI",
-                "distractor": "VO SEIFE VRO ACA",
-                "side": "0 1 0 0"
-            }
-        ]
-    },
-    {
-        "item": 36,
-        "cond": "SYV",
-        "reps": [
-            {
-                "target": "IL GATTO SCAPPANO FUORI",
-                "distractor": "EM UGQTA TZUETDPU MARAI",
-                "side": "1 0 0 1"
-            },
-            {
-                "target": "IL GATTO SCAPPANO FUORI",
-                "distractor": "OS QNALE ONPNCUHO ESBIE",
-                "side": "1 0 1 0"
-            },
-            {
-                "target": "IL GATTO SCAPPANO FUORI",
-                "distractor": "SI DURCA FZEOLOQH IOOND",
-                "side": "0 0 1 1"
             }
         ]
     },
@@ -382,18 +340,18 @@
         "cond": "SYC",
         "reps": [
             {
-                "target": "LE MAESTRE SPIEGANO BENE",
-                "distractor": "SA QLAMAAS AAISSUVH LLIU",
+                "target": "LE MAESTRE SPIEGANO BENE.",
+                "distractor": "SA QLAMAAS AAISSUVH LLIU.",
                 "side": "1 1 0 0"
             },
             {
-                "target": "LE MAESTRE SPIEGANO BENE",
-                "distractor": "DU LDEURGO IUBTTGIA PEFO",
+                "target": "LE MAESTRE SPIEGANO BENE.",
+                "distractor": "DU LDEURGO IUBTTGIA PEFO.",
                 "side": "0 0 1 0"
             },
             {
-                "target": "LE MAESTRE SPIEGANO BENE",
-                "distractor": "MI CCMUOEQ PANESPUI UUDT",
+                "target": "LE MAESTRE SPIEGANO BENE.",
+                "distractor": "MI CCMUOEQ PANESPUI UUDT.",
                 "side": "1 0 0 1"
             }
         ]
@@ -403,19 +361,61 @@
         "cond": "SEV",
         "reps": [
             {
-                "target": "LO SCOLARO TUONA LENTAMENTE",
-                "distractor": "AT TINROUP IBEME IDMLEPASEC",
+                "target": "LO SCOLARO TUONA LENTAMENTE.",
+                "distractor": "AT TINROUP IBEME IDMLEPASEC.",
                 "side": "0 1 1 1"
             },
             {
-                "target": "LO SCOLARO TUONA LENTAMENTE",
-                "distractor": "FO RROAOGB IROEQ PEZFZIOQFI",
+                "target": "LO SCOLARO TUONA LENTAMENTE.",
+                "distractor": "FO RROAOGB IROEQ PEZFZIOQFI.",
                 "side": "0 0 1 1"
             },
             {
-                "target": "LO SCOLARO TUONA LENTAMENTE",
-                "distractor": "GU IZPAAVQ HUSOE RFUDIEVNSA",
+                "target": "LO SCOLARO TUONA LENTAMENTE.",
+                "distractor": "GU IZPAAVQ HUSOE RFUDIEVNSA.",
                 "side": "0 0 1 0"
+            }
+        ]
+    },
+    {
+        "item": 50,
+        "cond": "SEC",
+        "reps": [
+            {
+                "target": "IL CONDUCENTE STERZA IMPROVVISAMENTE.",
+                "distractor": "OT RARGNOABEV POVFIN LGLFDEUUZHOQLII.",
+                "side": "1 0 0 1"
+            },
+            {
+                "target": "IL CONDUCENTE STERZA IMPROVVISAMENTE.",
+                "distractor": "DU DETUHDAZRU NNISVU IIZIACCHZLUTTIM.",
+                "side": "1 1 0 0"
+            },
+            {
+                "target": "IL CONDUCENTE STERZA IMPROVVISAMENTE.",
+                "distractor": "AH SUVUAMDLGU ABLBAD LUAUFRESUTSOPRR.",
+                "side": "0 1 1 0"
+            }
+        ]
+    },
+    {
+        "item": 37,
+        "cond": "SYC",
+        "reps": [
+            {
+                "target": "LA SEDIA STA QUI.",
+                "distractor": "AS CEOOC GEQ UOT.",
+                "side": "0 1 1 0"
+            },
+            {
+                "target": "LA SEDIA STA QUI.",
+                "distractor": "CE SMEUA GEZ ELE.",
+                "side": "1 0 0 0"
+            },
+            {
+                "target": "LA SEDIA STA QUI.",
+                "distractor": "VO SEIFE VRO ACA.",
+                "side": "0 1 0 0"
             }
         ]
     }

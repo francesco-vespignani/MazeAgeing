@@ -2,33 +2,33 @@
     "listA1": {
         "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockP.json",
         "blocks": [
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/AAT.json",
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/SAND.json",
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/B3A1.json"
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/AAT.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/SAND.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/B3A1.json"
         ]
     },
     "listB1": {
         "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockP.json",
         "blocks": [
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/AAT.json",
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/SAND.json",
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/B3B1.json"
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/AAT.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/SAND.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/B3B1.json"
         ]
     },
     "listA2": {
         "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockP.json",
         "blocks": [
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/AAT.json",
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/SAND.json",
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/B3A2.json"
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/AAT.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/SAND.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/B3A2.json"
         ]
     },
     "listB2": {
         "practice": "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/refs/heads/main/stimuli/blockP.json",
         "blocks": [
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/AAT.json",
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/SAND.json",
-            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/blob/3cb7836a58087be8a6562fe406939703d2ddd7be/B3B2.json"
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/stimuli/AAT.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/SAND.json",
+            "https://raw.githubusercontent.com/francesco-vespignani/MazeAgeing/3cb7836a58087be8a6562fe406939703d2ddd7be/B3B2.json"
         ]
     }
   }

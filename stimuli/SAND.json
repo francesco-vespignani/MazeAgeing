@@ -57,7 +57,7 @@
             },
             {
                 "target": "LA BAMBINA CHE ERA SUL PRATO VIDE UNA FARFALLA POSARSI SU UN ALBERO.",
-                "distractor": "EZ OHGLAAD IMN IEL AZN CANCU TUOB EED UDMRMIIH GUOGNMU RI ET UTOHLA.",
+                "distractor": "EZ OHGLAAD IMN IEL AZN CANCU TUOB EED UDMRMIIH GUOGNMU RI EM UTOHLA.",
                 "side": "0 0 1 1 1 1 0 1 1 0 1 0 0"
             }
         ]
@@ -89,7 +89,7 @@
         "reps": [
             {
                 "target": "IL CALCIATORE CHE HA FATTO UN BRUTTO FALLO \u00c8 STATO AMMONITO DA UN ARBITRO.",
-                "distractor": "AR IAQUUZUSDV ZRO AP FRUIM MU DSIGDO ILFED N DAULN UONTAZEL OF ET OCFAUFV.",
+                "distractor": "AR IAQUUZUSDV ZRO AP FRUIM MU DSIGDO ILFED N DAULN UONTAZEL EF OT OCFAUFV.",
                 "side": "0 0 0 1 1 0 0 1 0 1 1 0 1 0"
             },
             {
@@ -110,7 +110,7 @@
         "reps": [
             {
                 "target": "PRIMA DI METTERE IN MOTO LA SUA MACCHINA LUCA SI ALLACCI\u00d2 LA SCARPA.",
-                "distractor": "ERSNI NA SCTEUOQ RO ALID HO LUU CPOATVIB AVIM UF FAMOIQQL OT HEMAMP.",
+                "distractor": "ERSNI NA SCTEUOQ RO ALID HO LUU CPOATVIB AVIM UF FAMOIQQL OG HEMAMP.",
                 "side": "1 0 1 1 1 0 0 1 0 0 1 1 1"
             },
             {

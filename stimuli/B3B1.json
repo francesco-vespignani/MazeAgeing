@@ -57,7 +57,7 @@
             },
             {
                 "target": "IL GATTO SCAPPANO FUORI.",
-                "distractor": "SI DURCA FZEOLOQH IOOND.",
+                "distractor": "IM DURCA FZEOLOQH IOOND.",
                 "side": "0 0 1 1"
             }
         ]
@@ -68,12 +68,12 @@
         "reps": [
             {
                 "target": "LA BAMBINA PIOVE VELOCE.",
-                "distractor": "US SIOUSNF HAOMO NOBIUP.",
+                "distractor": "AS SIOUSNF HAOMO NOBIUP.",
                 "side": "1 0 1 0"
             },
             {
                 "target": "LA BAMBINA PIOVE VELOCE.",
-                "distractor": "SI GOGQIIN OROBE OAVCTI.",
+                "distractor": "NI GOGQIIN OROBE OAVCTI.",
                 "side": "0 1 1 0"
             },
             {
@@ -131,17 +131,17 @@
         "reps": [
             {
                 "target": "IL CANE CORRE VELOCE.",
-                "distractor": "EL OROH EHAMP BQOEUQ.",
+                "distractor": "ER OROH EHAMP BQOEUQ.",
                 "side": "1 0 0 0"
             },
             {
                 "target": "IL CANE CORRE VELOCE.",
-                "distractor": "HA GIZU GLAZA UTOVNA.",
+                "distractor": "PA GIZU GLAZA UTOVNA.",
                 "side": "1 0 1 1"
             },
             {
                 "target": "IL CANE CORRE VELOCE.",
-                "distractor": "TE EICL TUVAD OCAOSF.",
+                "distractor": "GE EICL TUVAD OCAOSF.",
                 "side": "0 1 0 0"
             }
         ]
@@ -152,7 +152,7 @@
         "reps": [
             {
                 "target": "IL BAMBINO SQUILLA SPESSO.",
-                "distractor": "TO SIDUMPO QNOUHVU GGFTAE.",
+                "distractor": "RO SIDUMPO QNOUHVU GGFTAE.",
                 "side": "0 1 1 1"
             },
             {
@@ -194,7 +194,7 @@
         "reps": [
             {
                 "target": "LE RAGAZZE CANTA BENE.",
-                "distractor": "TO NUFLAME EOZCB DVIE.",
+                "distractor": "OV NUFLAME EOZCB DVIE.",
                 "side": "0 0 1 0"
             },
             {
@@ -204,7 +204,7 @@
             },
             {
                 "target": "LE RAGAZZE CANTA BENE.",
-                "distractor": "IS EZIOVGS ATZOG EBOT.",
+                "distractor": "IB EZIOVGS ATZOG EBOT.",
                 "side": "1 1 0 0"
             }
         ]
@@ -225,7 +225,7 @@
             },
             {
                 "target": "IL PASSERO VOLA.",
-                "distractor": "IB DEOOHZN EPHI.",
+                "distractor": "IC DEOOHZN EPHI.",
                 "side": "1 1 0"
             }
         ]
@@ -257,7 +257,7 @@
         "reps": [
             {
                 "target": "I SOLDATI CIGOLANO CORAGGIOSAMENTE.",
-                "distractor": "U IFZCOOB AQAFUQOL HSHOMHUIICMAEEB.",
+                "distractor": "C IFZCOOB AQAFUQOL HSHOMHUIICMAEEB.",
                 "side": "0 1 0 1"
             },
             {
@@ -267,7 +267,7 @@
             },
             {
                 "target": "I SOLDATI CIGOLANO CORAGGIOSAMENTE.",
-                "distractor": "U EQECSSE AAPOUDGP BOZIOZNNGEINASU.",
+                "distractor": "M EQECSSE AAPOUDGP BOZIOZNNGEINASU.",
                 "side": "0 1 0 1"
             }
         ]
@@ -341,7 +341,7 @@
         "reps": [
             {
                 "target": "LE MAESTRE SPIEGANO BENE.",
-                "distractor": "SA QLAMAAS AAISSUVH LLIU.",
+                "distractor": "RA QLAMAAS AAISSUVH LLIU.",
                 "side": "1 1 0 0"
             },
             {
@@ -351,7 +351,7 @@
             },
             {
                 "target": "LE MAESTRE SPIEGANO BENE.",
-                "distractor": "MI CCMUOEQ PANESPUI UUDT.",
+                "distractor": "ZI CCMUOEQ PANESPUI UUDT.",
                 "side": "1 0 0 1"
             }
         ]
@@ -393,7 +393,7 @@
             },
             {
                 "target": "IL CONDUCENTE STERZA IMPROVVISAMENTE.",
-                "distractor": "AH SUVUAMDLGU ABLBAD LUAUFRESUTSOPRR.",
+                "distractor": "AR SUVUAMDLGU ABLBAD LUAUFRESUTSOPRR.",
                 "side": "0 1 1 0"
             }
         ]
@@ -409,7 +409,7 @@
             },
             {
                 "target": "LA SEDIA STA QUI.",
-                "distractor": "CE SMEUA GEZ ELE.",
+                "distractor": "CU SMEUA GEZ EEL.",
                 "side": "1 0 0 0"
             },
             {

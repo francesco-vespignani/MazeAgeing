@@ -5,7 +5,7 @@
         "reps": [
             {
                 "target": "LE MAESTRE SPIEGANO BENE.",
-                "distractor": "SA QLAMAAS AAISSUVH LLIU.",
+                "distractor": "TA QLAMAAS AAISSUVH LLIU.",
                 "side": "1 1 0 0"
             },
             {
@@ -15,7 +15,7 @@
             },
             {
                 "target": "LE MAESTRE SPIEGANO BENE.",
-                "distractor": "MI CCMUOEQ PANESPUI UUDT.",
+                "distractor": "FI CCMUOEQ PANESPUI UUDT.",
                 "side": "1 0 0 1"
             }
         ]
@@ -26,12 +26,12 @@
         "reps": [
             {
                 "target": "I SOLDATI CIGOLANO CORAGGIOSAMENTE.",
-                "distractor": "U IFZCOOB AQAFUQOL HSHOMHUIICMAEEB.",
+                "distractor": "G IFZCOOB AQAFUQOL HSHOMHUIICMAEEB.",
                 "side": "0 1 0 1"
             },
             {
                 "target": "I SOLDATI CIGOLANO CORAGGIOSAMENTE.",
-                "distractor": "U DEEQLAS FHEIMAIR GOFPUZOCIVAHNEU.",
+                "distractor": "F DEEQLAS FHEIMAIR GOFPUZOCIVAHNEU.",
                 "side": "1 0 1 1"
             },
             {
@@ -68,12 +68,12 @@
         "reps": [
             {
                 "target": "IL CANE CORRE VELOCE.",
-                "distractor": "EL OROH EHAMP BQOEUQ.",
+                "distractor": "EV OROH EHAMP BQOEUQ.",
                 "side": "1 0 0 0"
             },
             {
                 "target": "IL CANE CORRE VELOCE.",
-                "distractor": "HA GIZU GLAZA UTOVNA.",
+                "distractor": "PA GIZU GLAZA UTOVNA.",
                 "side": "1 0 1 1"
             },
             {
@@ -120,7 +120,7 @@
             },
             {
                 "target": "IL GATTO SCAPPANO FUORI.",
-                "distractor": "SI DURCA FZEOLOQH IOOND.",
+                "distractor": "NI DURCA FZEOLOQH IOOND.",
                 "side": "0 0 1 1"
             }
         ]
@@ -199,12 +199,12 @@
             },
             {
                 "target": "LA FINESTRA TREMANO FORTE.",
-                "distractor": "ME UHBULBAT GZIRAOT HSAIZ.",
+                "distractor": "MO UHBULBAT GZIRAOT HSAIZ.",
                 "side": "0 1 1 0"
             },
             {
                 "target": "LA FINESTRA TREMANO FORTE.",
-                "distractor": "UP RBIPSUAP EEGVQGE UCREH.",
+                "distractor": "UL RBIPSUAP EEGVQGE UCREH.",
                 "side": "1 0 1 0"
             }
         ]
@@ -236,12 +236,12 @@
         "reps": [
             {
                 "target": "LA BAMBINA PIOVE VELOCE.",
-                "distractor": "US SIOUSNF HAOMO NOBIUP.",
+                "distractor": "OP SIOUSNF HAOMO NOBIUP.",
                 "side": "1 0 1 0"
             },
             {
                 "target": "LA BAMBINA PIOVE VELOCE.",
-                "distractor": "SI GOGQIIN OROBE OAVCTI.",
+                "distractor": "IC GOGQIIN OROBE OAVCTI.",
                 "side": "0 1 1 0"
             },
             {
@@ -257,7 +257,7 @@
         "reps": [
             {
                 "target": "LE RAGAZZE CANTA BENE.",
-                "distractor": "TO NUFLAME EOZCB DVIE.",
+                "distractor": "RO NUFLAME EOZCB DVIE.",
                 "side": "0 0 1 0"
             },
             {
@@ -267,7 +267,7 @@
             },
             {
                 "target": "LE RAGAZZE CANTA BENE.",
-                "distractor": "IS EZIOVGS ATZOG EBOT.",
+                "distractor": "IB EZIOVGS ATZOG EBOT.",
                 "side": "1 1 0 0"
             }
         ]
@@ -309,7 +309,7 @@
             },
             {
                 "target": "IL PASSERO VOLA.",
-                "distractor": "IB DEOOHZN EPHI.",
+                "distractor": "EB DEOOHZN EPHI.",
                 "side": "1 1 0"
             }
         ]
@@ -393,7 +393,7 @@
             },
             {
                 "target": "IL CONDUCENTE STERZA IMPROVVISAMENTE.",
-                "distractor": "AH SUVUAMDLGU ABLBAD LUAUFRESUTSOPRR.",
+                "distractor": "AR SUVUAMDLGU ABLBAD LUAUFRESUTSOPRR.",
                 "side": "0 1 1 0"
             }
         ]

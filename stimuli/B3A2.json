@@ -36,7 +36,7 @@
             },
             {
                 "target": "LA BAMBINA FUGGE VELOCE DAVANTI AL CACCIATORE.",
-                "distractor": "VE ODSOMCE OFIHD BOATAM GOSNILE EL TGMUSUNIIO.",
+                "distractor": "EF ODSOMCE OFIHD BOATAM GOSNILE UL TGMUSUNIIO.",
                 "side": "0 1 0 1 1 1 1"
             }
         ]
@@ -57,7 +57,7 @@
             },
             {
                 "target": "SALTA MATITA SEDIA PANE.",
-                "distractor": "GAINM BFAALE EUCES NEVA.",
+                "distractor": "GAINM BFAALE EUCES VNIA.",
                 "side": "1 0 1 0"
             }
         ]
@@ -68,7 +68,7 @@
         "reps": [
             {
                 "target": "LA FINESTRA TREMA FORTE DURANTE LA BUFERA.",
-                "distractor": "QI ADUODGSL ZFIOM OHPMI OHFDQOE OB OGEGTE.",
+                "distractor": "GI ADUODGSL ZFIOM OHPMI OHFDQOE OB OGEGTE.",
                 "side": "0 0 0 0 1 0 1"
             },
             {
@@ -78,7 +78,7 @@
             },
             {
                 "target": "LA FINESTRA TREMA FORTE DURANTE LA BUFERA.",
-                "distractor": "BA LILRAGIM UMSBU BOCCU BAEBUZS RU RVAUGO.",
+                "distractor": "BA LILRAGIM UMSBU BOUCC BAEBUZS RU RVAUGO.",
                 "side": "1 0 0 1 0 0 0"
             }
         ]
@@ -157,7 +157,7 @@
             },
             {
                 "target": "LO SPAZZINO FONDE SOLO AD ELEVATE TEMPERATURE.",
-                "distractor": "UP EOGCRRUD TITCE OAMD ME MUOSAGI UNQFUGAOUCH.",
+                "distractor": "EP EOGCRRUD TITCE OAMD EM MUOSAGI UNQFUGAOUCH.",
                 "side": "1 1 0 0 0 1 1"
             },
             {
@@ -199,12 +199,12 @@
             },
             {
                 "target": "LA SCALA SCRICCHIOLA FORTE QUANDO PASSA IL LADRO.",
-                "distractor": "OZ OUZRN UOIVLGQRLTA ADTOS VAVPUU USIVH IS RISTI.",
+                "distractor": "OZ OUZRN UOIVLGQRLTA ADTOS VAVPUU USIVH IR RISTI.",
                 "side": "1 0 0 1 1 1 0 1"
             },
             {
                 "target": "LA SCALA SCRICCHIOLA FORTE QUANDO PASSA IL LADRO.",
-                "distractor": "AH NQEOB LTAHBZAQQUA ATICN VVOEFU REENL PE UPUNS.",
+                "distractor": "AG NQEOB LTAHBZAQQUA ATICN VVOEFU REENL PE UPUNS.",
                 "side": "0 0 0 0 1 1 0 0"
             }
         ]
@@ -215,7 +215,7 @@
         "reps": [
             {
                 "target": "IL SOLE TRAMONTA TARDI AL MARE.",
-                "distractor": "BU CARI HFTUUCPU AHPMI AZ HAOD.",
+                "distractor": "BU RCIA HFTUUCPU AHPMI AZ HAOD.",
                 "side": "1 1 1 1 0 0"
             },
             {
@@ -225,7 +225,7 @@
             },
             {
                 "target": "IL SOLE TRAMONTA TARDI AL MARE.",
-                "distractor": "PI MOMO UMUSSLDE LGUTU AM TUEV.",
+                "distractor": "PI ZMOO UMUSSLDE LGUTU AM TUEV.",
                 "side": "1 0 0 1 0 1"
             }
         ]
@@ -257,17 +257,17 @@
         "reps": [
             {
                 "target": "I GATTI SCAPPANO FUORI DAL CANCELLO.",
-                "distractor": "U GALIH HVHUUQMA UDHOU CZA FOOGSEPM.",
+                "distractor": "H GALIH HVHUUQMA UDHOU CZA FOOGSEPM.",
                 "side": "1 1 0 0 1 1"
             },
             {
                 "target": "I GATTI SCAPPANO FUORI DAL CANCELLO.",
-                "distractor": "U UGELV AVQIOBFF RUOCE IZH NEGSLLIO.",
+                "distractor": "P UGELV AVQIOBFF RUOCE IZH NEGSLLIO.",
                 "side": "0 0 0 1 0 1"
             },
             {
                 "target": "I GATTI SCAPPANO FUORI DAL CANCELLO.",
-                "distractor": "U NIZUZ EZQNPELO AIUSF UHT QQQAUPED.",
+                "distractor": "U NIZUZ EZQNPELO AIUSF EHT QQQAUPED.",
                 "side": "0 0 1 1 0 0"
             }
         ]
@@ -278,7 +278,7 @@
         "reps": [
             {
                 "target": "LE MAMME DORMONO PRESTO CON I FIGLI.",
-                "distractor": "UP OUBSB OVVUHAD ARCTBU EHH U AUQVR.",
+                "distractor": "IP OUBSB OVVUHAD ARCTBU EHH N AUQVR.",
                 "side": "1 0 1 0 1 0 0"
             },
             {
@@ -288,7 +288,7 @@
             },
             {
                 "target": "LE MAMME DORMONO PRESTO CON I FIGLI.",
-                "distractor": "TE BBUUG EEGVQGE NREEGR ELG U ZTIUG.",
+                "distractor": "ER BBUUG EEGVQGE NREEGR ELG C ZTIUG.",
                 "side": "1 0 1 1 1 0 0"
             }
         ]
@@ -299,12 +299,12 @@
         "reps": [
             {
                 "target": "LE COLLINE ASCOLTANO SEMPRE CON ARIA ANNOIATA.",
-                "distractor": "UP PACHUIP UGSUDFUAR VUNRAB VEV TIAO AFLDIEAE.",
+                "distractor": "EB PACHUIP UGSUDFUAR VUNRAB VEV TIAO AFLDIEAE.",
                 "side": "1 1 0 0 0 0 1"
             },
             {
                 "target": "LE COLLINE ASCOLTANO SEMPRE CON ARIA ANNOIATA.",
-                "distractor": "UZ IEGPZCE IORQVLAMA SALGOL ACS AUTU EATOVPEA.",
+                "distractor": "UZ IEGPZCE IORQVLAMA SALGOL ACS AUUT EATOVPEA.",
                 "side": "0 0 1 1 0 0 1"
             },
             {
@@ -320,17 +320,17 @@
         "reps": [
             {
                 "target": "LE SEDIE STA QUI VICINO AL TAVOLO.",
-                "distractor": "EP SUPIE ZNU ARE APGQIA UG IMANES.",
+                "distractor": "EP SUPIE ZNU AER APGQIA UG IMANES.",
                 "side": "0 0 1 0 1 0 1"
             },
             {
                 "target": "LE SEDIE STA QUI VICINO AL TAVOLO.",
-                "distractor": "OF EQACU ZON OEL AZFOIC PE UAIPGD.",
+                "distractor": "AF EQACU ZON OEL AZFOIC PE UAIPGD.",
                 "side": "0 1 0 0 0 1 0"
             },
             {
                 "target": "LE SEDIE STA QUI VICINO AL TAVOLO.",
-                "distractor": "IR IUPUN EPV OCI DEAQSE US OHREIT.",
+                "distractor": "IR IUPUN EPV OCI DEAQSE EV OHREIT.",
                 "side": "1 1 1 1 1 0 0"
             }
         ]
@@ -346,7 +346,7 @@
             },
             {
                 "target": "IL TASTO GERMOGLIA NEL PRATO IN PRIMAVERA.",
-                "distractor": "GO AZQMA QEQQSAZOE QFI UHTGU TO OVUFBZLUA.",
+                "distractor": "OG AZQMA QEQQSAZOE QFI UHTGU MO OVUFBZLUA.",
                 "side": "1 0 1 1 0 0 0"
             },
             {
@@ -362,12 +362,12 @@
         "reps": [
             {
                 "target": "I SEDILI PARTONO AL MATTINO AL FRONTE.",
-                "distractor": "U OAOTSG QBEOEMM NO SQIAQOP GU LRIAQZ.",
+                "distractor": "G OAOTSG QBEOEMM TO SQIAQOP GU LRIAQZ.",
                 "side": "1 1 0 1 0 1 0"
             },
             {
                 "target": "I SEDILI PARTONO AL MATTINO AL FRONTE.",
-                "distractor": "U OPOZTI ATZHOOL ON ABICIDR AC SFILIT.",
+                "distractor": "Q OPOZTI ATZHOOL NU ABICIDR AC SFILIT.",
                 "side": "1 1 1 1 0 1 1"
             },
             {
@@ -383,7 +383,7 @@
         "reps": [
             {
                 "target": "IL BAMBINO SQUILLA SEMPRE ALLA STESSA ORA.",
-                "distractor": "GO ZIBAALR AUEZGCT ZITPGU VANA NMUURH ODA.",
+                "distractor": "OL ZIBAALR AUEZGCT ZITPGU VANA NMUURH ODA.",
                 "side": "0 1 0 0 0 1 0"
             },
             {
@@ -393,7 +393,7 @@
             },
             {
                 "target": "IL BAMBINO SQUILLA SEMPRE ALLA STESSA ORA.",
-                "distractor": "LU LZISAOL ISAOVNT OTGBUS AEZV PUHLIZ UIM.",
+                "distractor": "VU LZISAOL ISAOVNT OTGBUS AEZV PUHLIZ UIM.",
                 "side": "0 0 1 1 0 1 0"
             }
         ]
@@ -404,7 +404,7 @@
         "reps": [
             {
                 "target": "I CANI CORRE VELOCE CON IL PADRONE.",
-                "distractor": "U OBPO USABS AICUSZ IPT EM CUAQTUQ.",
+                "distractor": "S OBPO USABS AICUSZ IPT EM CUAQTUQ.",
                 "side": "1 0 0 0 1 0 0"
             },
             {
@@ -414,7 +414,7 @@
             },
             {
                 "target": "I CANI CORRE VELOCE CON IL PADRONE.",
-                "distractor": "U TUOB DZFAO ETOFEZ GUT SI UTHTIZE.",
+                "distractor": "Z TUOB DZFAO ETOFEZ TGU ZI UTHTIZE.",
                 "side": "1 1 0 0 1 0 0"
             }
         ]
@@ -430,12 +430,12 @@
             },
             {
                 "target": "I BAMBINI GIOCA LONTANO DALLA SCUOLA.",
-                "distractor": "U ERCOIFN QHIUA OATREBD ROEVT EMTIQO.",
+                "distractor": "T ERCOIFN QHIUA OATREBD ROEVT EMTIQO.",
                 "side": "1 1 1 0 0 1"
             },
             {
                 "target": "I BAMBINI GIOCA LONTANO DALLA SCUOLA.",
-                "distractor": "U QMQEMOE IUROQ ESUEDNB AHHDE IIAPCB.",
+                "distractor": "M QMQEMOE IUROQ ESUEDNB AHHDE IIAPCB.",
                 "side": "0 1 0 1 1 1"
             }
         ]
@@ -451,7 +451,7 @@
             },
             {
                 "target": "LA SARTA STIRA DISTRATTA UNA CAMICIA.",
-                "distractor": "FA UZTIB ZRUOF HTTFUNZUE UIS BIIIQGI.",
+                "distractor": "RA UZTIB ZRUOF HTTFUNZUE UIS BIIIQGI.",
                 "side": "0 0 1 0 1 0"
             },
             {

@@ -1,0 +1,376 @@
+---
+title: "Repetition Maze in aging - regular sentences"
+output: html
+author: F.V.
+date: November 2025
+---
+
+Load libraries
+```{r, include = TRUE, echo=TRUE}
+library(lme4)
+library(lmerTest)
+library(ggplot2)
+library(sjPlot)
+library("knitr")
+knitr::opts_chunk$set(
+    echo = FALSE,
+    message = FALSE,
+    warning = FALSE,
+    fig.align='left',
+    fig.width=12,
+    fig.height=5,
+    fig.pos='H',
+    fig.path = "plots/",
+    out.width = "800px",
+    dev = c("png", "svg"),
+    dpi=500
+)
+```
+# Read data exclude errors and exclude RT larger than 3 seconds, coherce factors, create log transofrmed variables
+We select only correct sentences from AAT SAND block as well as semantic and syntactc control items (SEC and SYC) in the third block.
+
+We consider only correct trials and RT<3000ms.
+
+We cosider log of RT as dependent variable since it is typically more normally distributed in RTs.
+
+We consider log of count as an estimate of frequency of the form in the itwac database as the variable of word frequenct.
+
+The three levels of the variable repetition (rep) and encoded as "read" (1st presentation), "rep1" (2nd presentation) and "rep2" (3rd presentation).
+
+
+```{r mod_start, include = TRUE, echo = TRUE, results=TRUE}
+data =  read.table('data/dataMaioli.tsv', sep='\t', header= TRUE, as.is=TRUE)
+fac = c('scode','list','item','rep','POS','corrkey','correct','open')
+for (f in fac)  {
+    data[[f]]=factor(data [[f]])
+}
+levels(data$rep) = c('read','rep1','rep2')
+
+d = subset(data, rt<=3000 & correct == TRUE)
+
+d$lrt =  log(d$rt)
+d$lff = log(d$countForm)
+
+reg =  subset(d, cond %in% c('AAT','SAND','SEC','SYC'))
+
+```
+# Model to evaluate rep effects on wp and freq effects for reg sentences
+
+The aim of this analysis is to look at which lexical and distributional (word position) variables show large effects during reading and which of these effects change in the repetition. 
+
+We expect that frequency and word position would be the more relevant variables and could interact.
+
+We also expect word length (nchar)  would have a relevant role and possibly not linear (more cost for both very short and long words).
+
+Number of characters, word frequency and grammatical class are strongly correlated variables since close words tend to be short and frequent.  As well within open class words frequent words tend to be short (Zipf law). In our material the overall correlation between number of characters and the log of word frequency is indeed rather high (-0.76).
+
+Moreover the way italian language works and the way items arte built make impossible to have a balanced design with respect to word position.
+
+All this makes difficoult to model all the variables in  a parisimonous and sound statistical model. 
+
+Our aim is to find clear differences between reading and repetion as a functiuon of either frequency or word position since this would be an index of the functioning of working memory advantages of a coherent lexical-semantic integration. We mainly expect that during reading there will be a reduction of RT as a function of word order (stronger constraints) and of frequency (especially at sentence beginning) and that these effect would largely wash out (reduce) during repetition.
+
+We start by inspecting an overall model including all relevant variables (nchar, wp, lff, rep) in intaraction  with item and subject as a random function, being aware that the model can be overparametrized and check if simpler models show the same trends. To further check solidity of the effects we will run the same analysis separately for open words (using open word order in the sentence, instead of absolute poistion) and close words. 
+
+This analyis should allow us which are stronger effects of repetition on regular sentences.
+
+For these strong effect we will check if these emerge similarly in the three type of regular sentences (AAT, SEND and controls of block 3) and if the effects emerge strongly enough even considering only one or two repetitions.
+
+We will as well look if these effects also emerge in models limited to single subject within the assumption of using these indexes as a subject-level estimation of the effect.
+
+Before this analysis we reject word position after 9, for which the number of trial becomes very little.
+
+```{r mod_reg, include = TRUE, echo = TRUE}
+
+table(reg$wp)
+
+reg = subset(reg, wp<9)
+```
+
+
+```{r, include = TRUE, echo = TRUE}
+
+am = lmer(lrt ~ nchar + lff + wp + rep + (1|item) + (1|scode), data=reg)
+mm = lmer(lrt ~ nchar * lff * wp * rep + (1|item) + (1|scode), data=reg)
+
+anova(am,mm)
+
+summary(mm)
+
+```
+
+The large difference of variance explained shows that the variables strongly interacts, as also shown by the table of fixed efefct of the multiplicative model (mm).
+
+The strongest effects emerges for nchar and  its interactions. Since the effect of nchar may be rather complex and non linear, confounded with more interpretable variable (e.g. open-close class, frequency) we will repeat the same analysis using nchar as a factor variable (estimating effects separately for each length value)  and plot the effect in interaction with repetition to better understand the role of this variable.
+
+
+```{r mod_nchar_rep, include = TRUE, echo = TRUE}
+
+reg2 = reg 
+reg2$nchar = factor(reg2$nchar)
+mm = lmer(lrt ~ nchar * lff * wp * rep + (1|item) + (1|scode), data=reg2)
+summary(mm)
+plot_model(mm, type='pred', terms=c('nchar','rep'))
+
+```
+
+The plot of the predicted effects suggest that nchar works similarly and smootly across values between 2 and 8. When words are very long (>9 letters) or composed by a single character the estimates of the model become very noisy.  We atribute this to specific features of the maze task and not a to psychological relevant factors and thus we consider the following model on restricted data. It shows effects of frequency,  word position, repetition2 and a complex interaction between frequency, number of charaters and repetition1.
+
+```{r mod_excludelong, include = TRUE, echo = TRUE}
+
+reg3 = subset(reg, nchar>1 & nchar <9)
+
+mod2 = lmer(lrt ~ nchar + lff*wp*rep + (1|item) + (1|scode), data=reg3)
+
+summary(mod2)
+
+```
+
+Since we may expect different effects of these variables for open and close word we conduct separate analyses on these subset,  using word order instead of word position
+
+
+*Close words*
+
+```{r mod_close, include = TRUE, echo = TRUE}
+
+regclose = subset(reg3, open==0)
+
+modC = lmer(lrt ~ nchar * lff*cwo*rep + (1|item) + (1|scode), data=regclose)
+
+summary(modC)
+```
+
+The more relevant effect including repetition is the interaction including nchar, lff and reprep1. The plot below illustrates the effect, showing a reduction of the effect of word length (shorter words give longer RT) and of the effect of frequency (slower RT for low frequency words) between reading and repetition.  We think this effect is mainly linked to the task (short words are difficoult in the maze task but maybe not in normal reading) and repetition shows just a quantitative reduction of the effect ratehr than a clear qualitative processing change.
+
+```{r mod_close_plot, include = TRUE, echo = TRUE}
+
+plot_model(modC, type='pred', terms = c('nchar','lff', 'rep'))
+
+```
+
+*Open words*
+```{r mod_open, include = TRUE, echo = TRUE}
+
+regopen = subset(reg3, open==1)
+
+modO = lmer(lrt ~ nchar * lff*owo*rep + (1|item) + (1|scode), data=regopen)
+
+summary(modO)
+
+```
+Open words clearly show effects mainly in repetition1 for frquency and word order plus some limited interaction with nchar. The following plot shows graphcally the more relevant predictions of the model.
+
+
+```{r  mod_open_plot, include = TRUE, echo = TRUE}
+
+plot_model(modO, type='pred', terms = c('owo','lff', 'rep'))
+
+```
+
+The following plots shows how this efefect is further qualifiyed by word length,  suggesting a different patter for short (nchar=2,3) and long open class words. The table of the material shows that short open class words are not many  and thus we exclude them.
+
+In order to check if effects emerge at single subject level and for subsets of the data we further restrict the analysis to read and repetition1 where the difference in processing appears maximal, removing data of repetition2 and symplifying the model excluding the nchar variable.
+
+```{r mod_openrep1_plot, include = TRUE, echo = TRUE}
+
+plot_model(modO, type='pred', terms = c('owo','lff', 'rep','nchar'))
+
+table(regopen$nchar)
+
+regopen2 = subset(regopen, rep !="rep2" & nchar>3)
+
+modO = lmer(lrt ~ lff*owo*rep + (1|item) + (1|scode), data=regopen2)
+summary(modO)
+
+plot_model(modO, type='pred', terms = c('lff', 'rep'))
+
+```
+
+The main effect on this specific subset of data appear strong enough to show large advantage on these specific words for repetition (t = 5.059) that may indeed show to be valid also at single subject level or for small groups of patients and a relavant interaction with word frquency which shows this advantage is particularly relevant for low frequency word. Both these measures as well as their interaction could be considered an index of an efficient memory of lexical items within sentences.  No clear interaction on these specific data emerge with the order of the word in the sentence.
+
+
+## Same model restricted to AAT, SAND and Controls
+
+```{r mod_open_restricted, include = TRUE, echo = TRUE}
+
+modAAT = lmer(lrt ~ lff*owo*rep + (1|item) + (1|scode), data=subset(regopen2, cond=='AAT'))
+summary(modAAT)
+
+plot_model(modAAT, type='pred', terms = c('lff', 'rep'))
+
+
+modSAND = lmer(lrt ~ lff*owo*rep + (1|item) + (1|scode), data=subset(regopen2, cond=='SAND'))
+summary(modSAND)
+
+plot_model(modSAND, type='pred', terms = c('lff', 'rep'))
+plot_model(modSAND, type='pred', terms = c('lff', 'rep', 'owo'))
+
+
+ctr = subset(regopen2, cond %in% c('SEC','SYC') & listType=='A')
+
+modCTR = lmer(lrt ~ lff*owo*rep + (1|item) + (1|scode), data=ctr)
+summary(modCTR)
+
+plot_model(modCTR, type='pred', terms = c('lff', 'rep'))
+plot_model(modCTR, type='pred', terms = c('lff', 'rep', 'owo'))
+table(ctr$owo)
+
+```
+
+The three models restricted to only a part of the material give somewhat different results:  the results of AAT mirror the results of the overall analysis while for SAND and CTR the analysis gives higher order interactions with word order. 
+
+In SAND material the reduction of RT for low frequency words is qualifiyed by an interaction with word order which does not shows up in the first open word positions but only in later ones.
+
+For CTR material, the control of semantic and syntactic violation the general pattern emerges for first word position while a paradoxial cost of reading for high frequency words appear for late words in the sentence.  Since the lits were not balanced and we are dealing with a limited number of long sentences this may be due to some overfitting of the data.
+
+The overall pattern of the interaction between frequency and repetition is confirmed. Moreover the qualification of these effect as a function of word order seems unstable across the three blocks. Further analysis with a larger sample of subjects (and correctly counterbalanced blocks 3) should be done to better understand these aspects.
+
+## Same model for each subject
+
+Despite across groups of items some effects of open word order emerges, also in  interaction with  frequency and repetition, we will test on single subjects a parsimonious simlifyied model including only lff and rep in interaction which shows large overall effects.
+
+The following plots report the the estimates of the effects of single subject models and the error bar represent the estimated standard deviation,  If the bar does not include 0 the effect is to be considered singnificant/large.
+
+
+```{r mod_open_ss, include = TRUE, echo = TRUE}
+mod = lmer(lrt ~ lff*rep + (1|item) + (1|scode), data=regopen2)
+summary(mod)
+
+out = data.frame()
+for (i in levels(regopen2$scode)) { 
+	sb = subset(regopen2, scode ==i)
+	tmp = lmer(lrt ~ lff*rep + (1|item), data=sb)
+	sm = summary(tmp)
+	h =  data.frame(sm$coefficients)
+	h$term = c('int','lff','rep','lff:rep')
+	h$scode = i
+    h$age = sb$age[1]
+	out = rbind(out,h)
+}
+
+out$upper = out$Estimate + out$Std..Error
+out$lower = out$Estimate - out$Std..Error
+
+a = subset(out, term =='int', select=c('scode','age', 'Estimate', 'lower','upper'))
+colnames(a)[3:5] =c('int','int.l', 'int.h')
+b = subset(out, term =='rep', select=c('scode','age', 'Estimate', 'lower','upper'))
+colnames(b)[3:5] =c('rep','rep.l', 'rep.h')
+c = subset(out, term =='lff', select=c('scode','age', 'Estimate', 'lower','upper'))
+colnames(c)[3:5] =c('lff','lff.l', 'lff.h')
+d = subset(out, term =='lff:rep', select=c('scode','age', 'Estimate', 'lower','upper'))
+colnames(d)[3:5] =c('lff.rep','lff.rep.l', 'lff.rep.h')
+
+e = merge(a,b)
+e = merge(e,c)
+e = merge(e,d)
+
+
+ggplot() + geom_point(data=e, mapping=aes(x=int, y=scode), size=4, shape=21, fill="blue") +
+   geom_errorbar(data=e, mapping=aes(x=int, y=scode, xmin=int.l, xmax=int.h)) +
+   theme_bw() + ggtitle('Estimate of intercept') +
+   xlab ('Estimate of the basic speed of reading at sentence beginning [log(ms)]') +
+   ylab ("Subject's codes")
+
+ggplot() + geom_point(data=e, mapping=aes(x=rep, y=scode), size=4, shape=21, fill="blue") +
+   geom_errorbar(data=e, mapping=aes(x=rep, y=scode, xmin=rep.l, xmax=rep.h)) +
+   geom_vline(xintercept = 0, size=1) + theme_bw() + ggtitle('Estimate of main effect of repetition') +
+   xlab ('Estimate of the effect of repetition [log(ms)]') +
+   ylab ("Subject's codes")
+
+ggplot() + geom_point(data=e, mapping=aes(x=lff, y=scode), size=4, shape=21, fill="blue") +
+   geom_errorbar(data=e, mapping=aes(x=lff, y=scode, xmin=lff.l, xmax=lff.h)) +
+   geom_vline(xintercept = 0, size=1) + theme_bw() + ggtitle('Estimate of main effect of log Frequency') +
+   xlab ('Estimate of the effect of log-frequency [log(ms)]') +
+   ylab ("Subject's codes")
+
+ggplot() + geom_point(data=e, mapping=aes(x=lff.rep, y=scode), size=4, shape=21, fill="blue") +
+   geom_errorbar(data=e, mapping=aes(x=lff.rep, y=scode, xmin=lff.rep.l, xmax=lff.rep.h)) +
+   geom_vline(xintercept = 0, size=1) + theme_bw() + geom_label()  + ggtitle('Estimate of the interaction between  Frequancy and repetition') +
+   xlab ('Estimate of the intefaction between log-frequency and repetition [log(ms)]') +
+   ylab ("Subject's codes")
+
+
+```
+
+
+The following plots  display two by two relations of these estimates (comments below).
+
+
+```{r mod_open_ss_effects, include = TRUE, echo = TRUE}
+
+
+
+ggplot(e, aes(x=int, y=lff, label=scode) ) + geom_point(data=e, mapping=aes(y=lff, x=int), size=4, shape=21, fill="blue") +  
+   geom_errorbar(data=e, mapping=aes(x=int, y=lff, xmin=int.l, xmax=int.h)) +
+   geom_errorbar(data=e, mapping=aes(x=int, y=lff, ymin=lff.l, ymax=lff.h)) +
+   geom_hline(yintercept = 0, size=2) + geom_label() + theme_bw() + ggtitle('Frequency Effect as a function of global speed') +
+   xlab ('Estimate of the basic spped of reading at sentence beginning [log(ms)]') +
+   ylab ('Estimate of the effect of frequancy [log(ms)]') +
+   geom_smooth(method='gam', se=0)
+
+ggplot(e, aes(y=rep, x=int, label=scode) ) +
+   geom_point(data=e, size=4, shape=21, fill="blue") +  
+   geom_errorbar(data=e, mapping=aes(xmin=int.l, xmax=int.h)) +
+   geom_errorbar(data=e, mapping=aes(ymin=rep.l, ymax=rep.h)) +
+   geom_hline(yintercept = 0, size=1)  + geom_label() +
+   theme_bw() + ggtitle('Repetition Effect as a function of global speed') +
+   xlab ('Estimate of the basic spped of reading at sentence beginning [log(ms)]') +
+   ylab ('Estimate of the effect of repetition [log(ms)]') +
+   geom_smooth(method='gam', se=0)
+
+
+ggplot(e, aes(y=lff.rep, x=lff, label=scode) ) +
+   geom_point(data=e, size=4, shape=21, fill="blue") +  
+   geom_errorbar(data=e, mapping=aes(xmin=lff.l, xmax=lff.h)) +
+   geom_errorbar(data=e, mapping=aes(ymin=lff.rep.l, ymax=lff.rep.h)) +
+   geom_hline(yintercept = 0, size=1) + geom_vline(xintercept = 0, size=1) + 
+   geom_label() +
+   theme_bw() + ggtitle('Frequency Effect as a function Frequency BY Repetition interaction') +
+   xlab ('Estimate of magnitude of frequency by repetition interaction [log(ms)]') +
+   ylab ('Estimate of the effect of ferquency in reading [log(ms)]') +
+   geom_smooth(method='gam', se=0)
+
+
+```
+
+
+The plots show that, as it can be expected faster subjects show in general smaller effects of frequency and repetition.  Moreover, subjects which show small effects of frequency hardly reduce them during repetition.
+
+The fastest subject (EBQ) also shows an inverse frequency effect,  possibly based on  due to some strategic effect or just at chance. This suggests not to put to much temporal pressure on the task. A couple of subject show very low speed but the interplay with frequency and repetition seems in line with the group.
+
+It is interesting to note that both in the plot of frequency effect as a function of global speed and in the frequency by repetition effect as a function of frequency a couple of subjects seem to lie out of the group.  These subjects are not exteremely slow but show little effects of frequency and this is not reduced by repetition. Clearly this could be due to noise but it can be a sign that these subjects are not able as others to profit of sentence repetition to reduce the costs of access at low-frequency words.
+
+We plot the model predictions of these two subjects below.
+
+```{r mod_open_ss_outliers, include = TRUE, echo = TRUE}
+
+#  models on two subjects 58I  e QOL
+
+sb = subset(regopen2, scode =='QOL')
+tmp = lmer(rt ~ lff*rep + (1|item), data=sb)
+sm = summary(tmp)
+plot_model(tmp, type='pred', terms = c('lff', 'rep'), title = 'Predicted RT of frequency and repetition for subject QOL')
+
+
+
+sb = subset(regopen2, scode =='58I')
+tmp = lmer(rt ~ lff*rep + (1|item), data=sb)
+sm = summary(tmp)
+plot_model(tmp, type='pred', terms = c('lff', 'rep'), title = 'Predicted RT of frequency and repetition for subject 58I')
+
+```
+
+
+##  Resume
+
+As first we analyzed with mixed model the effects of number of chracter, frequency of the owr,  word order (or position) and repetition in interaction.  Clearly a model like this is likely to be overfitting the results,  moreover some of these variable are not independent in language (Zipf law) or in our stimuli, inducing correlations of the predictors.
+
+We have seen that nchar has a rather complex behaviour, mainly attributed to the nature of the maze task which become more difficoult for short characters. Moreover frequency effects and word position seem to have different effects in function and content word.  On the basis of these early analyises wich were mainly explorative we decided to run single subject models on:
+
+a) a subset of the open words with more than 3 characters and not considering wp above 9
+
+b) limiting the analisys to the comparison of reading and 1st repetition, since 2nd repetition does not seem to show such large qualitative difference
+
+c) ignoring nchar and owo (open word order) as predictors since the first does not seem to be very important in this subset of the data and the second seems to show different trends in the three subset of the material we have.
+
+The model applied to single subjects show that effects seem rather strong the interpretation of subject that do not pattern the others suggests that the technique could provide a sensitive measure of the reduction of frequency sensitivity in repetition. TODO... what does this mean in terms of WM and situational support? 

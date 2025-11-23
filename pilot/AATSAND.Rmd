@@ -1,0 +1,107 @@
+---
+title: "Repetition Maze in aging - SAND e AAT"
+output: html
+author: F.V.
+date: November 2025
+---
+
+Load libraries
+```{r aatsand_lib, include = TRUE, echo=TRUE}
+library(lme4)
+library(lmerTest)
+library(ggplot2)
+library("knitr")
+knitr::opts_chunk$set(
+    echo = FALSE,
+    message = FALSE,
+    warning = FALSE,
+    fig.align='left',
+    fig.width=12,
+    fig.height=5,
+    fig.pos='H',
+    fig.path = "plots/",
+    out.width = "800px",
+    dev = c("png", "svg"),
+    dpi=500
+)
+```
+# Read data exclude errors and exclude RT larger than 3 seconds, coherce factors, create log transofrmed variables
+We select only correct sentences from AAT SAND blocks
+
+We consider only correct trials and RT<3000ms.
+
+The three levels of the variable repetition (rep) and encoded as "read" (1st presentation), "rep1" (2nd presentation) and "rep2" (3rd presentation).
+
+In this analysis separate analyses are run for AAT and SAND items. The ITEM in these tests are assumed to become more complex as a function of item order (longer and more complex sentences) and we expect that repetition effects could be more beneficial for larger values of items.  This may be a linear function or not (in the case very difficult items are hard to keep in mind)  we may expect non-linear effects both on reading and on the repetition effects.  To this aim we will run linear mixed models with item as a cartegorical ordered factor which allow to check if linear, quadratic or cubic effects emerge both as main effect of the two variable considered (item and repetition). Since items differ a lot in terms of length word position e word order will not be considered.  We may want to whash out spurious effects of nchar (length in characters) and word frequency but not in interaction with the main variables.
+
+
+
+```{r aatsand_read, include = TRUE, echo = TRUE, results=TRUE}
+data =  read.table('data/dataMaioli.tsv', sep='\t', header= TRUE, as.is=TRUE)
+fac = c('scode','list','item','rep','POS','corrkey','correct','open')
+for (f in fac)  {
+    data[[f]]=factor(data [[f]])
+}
+levels(data$rep) = c('read','rep1','rep2')
+
+d = subset(data, rt<=3000 & correct == TRUE)
+
+d$lrt =  log(d$rt)
+d$lff = log(d$countForm)
+
+aat =  subset(d, cond %in% c('AAT'))
+aat$item = factor(as.numeric(as.character(aat$item)), ordered=TRUE)
+sand = subset(d, cond %in% c('SAND'))
+sand$item = factor(as.numeric(as.character(sand$item))-20, ordered=TRUE)
+```
+# AAT
+
+
+```{r aat, include = TRUE, echo = TRUE}
+
+l0 = lmer(lrt~rep+item + (1|scode), data = aat)
+l1 = lmer(lrt~rep*item + (1|scode), data = aat)
+l2 = lmer(lrt~rep*item + nchar*lff + (1|scode), data = aat)
+anova(l0,l1,l2)
+
+plot_model(l1, type='pred', terms=c('item', 'rep'), title='AAT item and repetition effect - model l1') + ylab('log RT')
+plot_model(l2, type='pred', terms=c('item', 'rep'), title='AAT item and repetition effect - model l2') + ylab('log RT')
+
+
+summary(l1)
+
+```
+
+Despite the fact that model l2 seems better the plots show that l1 and l2 show similar prediction of the effects of items, repetition and their interaction.
+
+The first item seems to behave rather differently  but it is the first real item after practivce...
+
+Maximal effect of repetition emerge for intermediate number of items.
+
+Second repetition shows numerically larger RT than first repetition with excpetion on one item, despite it is likely that this difference is not significant  and we can not stato 2nd repetition shows "a cost" with respect to the first, we can clearly conclude that there is no further advantage in the 2nd repetition with respect to the cost.
+
+The fact that repetition advantage shows not only a linear effect as a function of item is due to the fact that repetition effect start to decrease in the last items (8-10).  There may be many explanations of this, teh more likely to me is that practice in the task allow to reduce RT in the reading stage even if items becomes a little more complex.
+
+# SAND
+
+Same analysis as above
+
+```{r sand, include = TRUE, echo = TRUE}
+
+l0 = lmer(lrt~rep+item + (1|scode), data = sand)
+l1 = lmer(lrt~rep*item + (1|scode), data = sand)
+l2 = lmer(lrt~rep*item + nchar*lff + (1|scode), data = sand)
+anova(l0,l1,l2)
+
+plot_model(l1, type='pred', terms=c('item', 'rep'), title='SAND item and repetition effect - model l1') + ylab('log RT')
+
+plot_model(l2, type='pred', terms=c('item', 'rep'), title='SAND item and repetition effect - model l2') + ylab('log RT')
+
+
+summary(l1)
+
+```
+
+The pattern for SAND  (2nd block)  shows a much more complex pattern.  The effect of item difficulty/sequence is clearly non linear since there is an increace in 1-2 and then an abrupt decrease of RT  of words in item 3 (maybe there are more function words in item3?) and then another linear trend ebtween 3 and 6.  As for repetition, its effect is stronger for items which show average longer rt during the reading stage.
+
+REMIND for interpretation that dependent variable is RT for each word not the sum across word,  this means the model estimates average RT across words for each item  (and this average is clearly different across long and short sentences....)

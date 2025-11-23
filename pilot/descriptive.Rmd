@@ -1,0 +1,138 @@
+---
+title: "Repetition Maze in aging"
+output: html
+author: F.V.
+date: November 2025
+---
+
+Load libraries
+```{r, include = TRUE, echo=TRUE}
+library(ggplot2)
+library("knitr")
+knitr::opts_chunk$set(
+    echo = FALSE,
+    message = FALSE,
+    warning = FALSE,
+    fig.align='left',
+    fig.width=12,
+    fig.height=5,
+    fig.pos='H',
+    fig.path = "plots/",
+    out.width = "800px",
+    dev = c("png", "svg"),
+    dpi=500
+)
+```
+# Read data exclude errors and exclude RT larger than 3 seconds, coherce factors, create log transofrmed variables
+
+We also remove the condition WS (word salad)  since for an error these items were present only on two of the four lists. The three levels of teh variable repetition (rep) and encoded as "read" (1st presentation), "rep1" (2nd presentation) and "rep2" (3rd presentation).
+
+```{r, include = TRUE, echo = TRUE, results=TRUE}
+data =  read.table('data/dataMaioli.tsv', sep='\t', header= TRUE, as.is=TRUE)
+fac = c('scode','list','item','rep','POS','corrkey','correct','open')
+for (f in fac)  {
+    data[[f]]=factor(data [[f]])
+}
+levels(data$rep) = c('read','rep1','rep2')
+
+print('*risposte corrette per soggetto*')
+kable(table(data$scode, data$correct))
+
+print('*numero outlier per soggetto*')
+kable(table(data$scode[data$rt>3000]))
+
+d = subset(data, rt<=3000 & correct == TRUE & cond !='WS')
+
+d$lrt =  log(d$rt)
+d$lff = log(d$countForm)
+d$llf = log(d$countLemma)
+```
+# Analisys on regular sentences 
+
+We first consider all regular sentences,  pooling toghether AAT, SAND and the control condisions of the third block (SEC, SYC). These sentence have a variable length, syntactic structure and difficulty. Separate data sets for open and close words are also created.
+
+```{r, include = TRUE, echo = TRUE}
+reg =  subset(d, cond %in% c('AAT','SAND','SEC','SYC'))
+ow = subset(reg, open==1, select=-cwo)
+cw = subset(reg, open!=1, select=-owo)
+```
+
+## Descriptive plots
+
+These plots are on raw data to describe the data set and see if marcrosocpic trends emerge across trials and subjects.
+
+###  bare repetition effect (all other variable collapsed)
+
+```{r rt_rep, include = TRUE, echo = TRUE, fig.width=12, fig.height=6}
+ggplot(reg, aes(x=rep, y=rt))+ geom_violin() + geom_jitter(width=0.1, height=0, size=0.3)
+```
+
+###  word position 
+
+For this analisis word position is treated as a countinuos interval variable (it can be also considered, probably more correctly, as an ordinal factor).
+
+**RT vs word position**
+```{r rt_rep_wp, include = TRUE, echo = TRUE }
+ggplot(reg, aes(x=wp, y=rt))+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(reg$rep) + 
+    ggtitle('RT as a function of word position') + 
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", fx = TRUE, k = 5))
+```
+
+**RT vs word position split between open and close class word**
+```{r rt_rep_wp2, include = TRUE, echo = TRUE}
+ggplot(reg, aes(x=wp, y=rt, color=open))+ geom_jitter(width=0.2, height=0, size=0.1) + facet_wrap(reg$rep) + 
+    ggtitle('RT as a function of word position (separate fit for open and close words)') +
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", fx = TRUE, k = 5))
+```
+
+###  open/close word order 
+
+Differently from previous plots we look as predictior the oreder of that type of word (open and close class) within the sentences.
+
+**Open words**
+```{r rt_rep_wo_open, include = TRUE, echo = TRUE }
+ggplot(ow, aes(x=owo, y=rt))+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(ow$rep) + 
+    ggtitle('RT for open class words as a function their order in the sentence') + 
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", fx = TRUE, k = 5))
+```
+
+**Close words**
+```{r rt_rep_wo_close, include = TRUE, echo = TRUE}
+ggplot(cw, aes(x=cwo, y=rt))+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(cw$rep) + 
+    ggtitle('RT for close class  words as a function their order in the sentence') + 
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", fx = TRUE, k = 5))
+```
+
+
+###  number of characters
+
+**RT vs word length**
+```{r rt_rep_nchar, include = TRUE, echo = TRUE }
+ggplot(reg, aes(x=nchar, y=rt))+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(reg$rep) + 
+    ggtitle('RT as a function of number of characters') + 
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", fx = TRUE, k = 5))
+```
+
+**RT vs word length split for open and close class words**
+```{r rt_rep_nchar2, include = TRUE, echo = TRUE }
+ggplot(reg, aes(x=nchar, y=rt, color=open))+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(reg$rep) + 
+    ggtitle('RT as a function of number of characters') + 
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", fx = TRUE, k = 5))
+```
+
+###  Log of word form frequency
+
+
+**RT vs log word form frequency**
+```{r rt_rep_lff, include = TRUE, echo = TRUE }
+ggplot(reg, aes(x=lff, y=rt))+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(reg$rep) + 
+    ggtitle('RT as a function of log of Frequency') + 
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", fx = TRUE, k = 5))
+```
+
+**RT vs log word form frequency (open close words seprately)**
+```{r rt_rep_lff2, include = TRUE, echo = TRUE }
+ggplot(reg, aes(x=lff, y=rt, color=open))+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(reg$rep) + 
+    ggtitle('RT as a function of log of Frequency') + 
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", fx = TRUE, k = 5))
+```

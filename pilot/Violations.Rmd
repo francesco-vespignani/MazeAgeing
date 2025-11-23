@@ -1,0 +1,361 @@
+---
+title: "Repetition Maze in aging - Violations"
+output: html
+author: F.V.
+date: November 2025
+---
+
+Load libraries
+```{r vio-load, include = TRUE, echo=TRUE}
+library(lme4)
+library(lmerTest)
+library(ggplot2)
+library("knitr")
+knitr::opts_chunk$set(
+    echo = FALSE,
+    message = FALSE,
+    warning = FALSE,
+    fig.align='left',
+    fig.width=12,
+    fig.height=5,
+    fig.pos='H',
+    fig.path = "plots/",
+    out.width = "800px",
+    dev = c("png", "svg"),
+    dpi=500
+)
+```
+# Read data exclude errors and exclude RT larger than 3 seconds, coherce factors, create log transofrmed variables
+
+We select only correct sentences from the 3rd block
+
+We consider only correct trials and RT<3000ms.
+
+The three levels of the variable repetition (rep) and encoded as "read" (1st presentation), "rep1" (2nd presentation) and "rep2" (3rd presentation).
+
+
+Syntactic and Semantic violation will be studies separately to allow for simpler modeling and the pattern for the two types of violation will be compared qualitativey.
+
+The critical word is always wp=2 (the third word of the sentence, wp starts from 0). 
+
+
+Given the strong unbalancedness on word length between ListA with has many word after the violations and listB  which typically has only one word after the violation (error  of counterbalancing)  we will first model the effect in the whole sentence but then we will limit the more carefull analysis to the first 4 words of the sentences (wp =0,1,2,3) that are present in both list.
+
+The error in counterbalancing the lists prevents us to study in depth long spillover effects and end of sentence effect (the reason why we had longer sentences in list A)  but, on another way, it offers us the possibility to check if local effects (on target word wp=2 and on the  following wp=3) are similar in teh two list independently from the fact that for half of the subjects (who have seen list B)  wp=3 is also the end of the sentence and for the other half it is not. If similar effects are found for listA and listB the generality of the results would be clearly stronger.
+
+```{r vio-select, include = TRUE, echo = TRUE, results=TRUE}
+data =  read.table('data/dataMaioli.tsv', sep='\t', header= TRUE, as.is=TRUE)
+fac = c('scode','list','item','rep','POS','corrkey','correct','open')
+for (f in fac)  {
+    data[[f]]=factor(data [[f]])
+}
+levels(data$rep) = c('read','rep1','rep2')
+
+d = subset(data, rt<=3000 & correct == TRUE)
+
+d$lrt =  log(d$rt)
+d$lff = log(d$countForm)
+
+se =  subset(d, cond %in% c('SEC','SEV'))
+sy =  subset(d, cond %in% c('SYC','SYV'))
+
+```
+# Semantic Violation 
+
+Combined effect of violation, word position and repetition across the whole data. Explorative plots with wp as scale factor.
+
+```{r vio-se-desc, include = TRUE, echo = TRUE}
+
+ggplot(se, aes(x=wp, y=rt, color=cond))+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(se$rep) + 
+    ggtitle('RT as a function of word position') + 
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", fx = TRUE, k = 7))
+
+
+```
+
+There is an effect at the target word and the effect seems even larger and involve also the previous word (the noun) in repetition 1,  in repetition 2 the effect seems to be largely reduced.
+
+Statistical anlyses restricted to WP 1,2,3. WP in the following are considered no more as a continuous variables but levels of non -ordered factors.
+
+
+
+```{r vio-se-stat, include = TRUE, echo = TRUE}
+sesh = subset(se, wp %in% c(1,2,3))
+sesh$wp = factor(sesh$wp)
+
+
+l = lmer(lrt~rep*cond*wp + (1|item) + (1|scode), data = sesh)
+plot_model(l, type='pred', terms=c('wp', 'cond','rep'))
+summary(l)
+
+```
+
+No clear significant effects of violation or interactions with wp and rep emerge.  We also run an analysis restricted to wp2 (the target)
+
+
+```{r vio-se-target, include = TRUE, echo = TRUE}
+se2 = subset(se, wp == 2)
+
+
+l = lmer(lrt~rep*cond + (1|item) + (1|scode), data = se2)
+plot_model(l, type='pred', terms=c('rep','cond'))
+summary(l)
+
+```
+
+In this analysis the effect of violation emerges clearly but it does not significantly interact with repetition. The cost persists across repetitions even if it appears numerically larger in repetition1 and smaller in repetition2.
+
+# Syntactic Violation 
+
+Combined effect of violation, word position and repetition across the whole data. Explorative plots with wp as scale factor.
+
+```{r vio-sy-desc, include = TRUE, echo = TRUE}
+
+ggplot(sy, aes(x=wp, y=rt, color=cond))+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(sy$rep) + 
+    ggtitle('RT as a function of word position') + 
+    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", fx = TRUE, k = 7))
+
+
+```
+
+
+For syntactic violation the pattern seems to differ a lot.  The local effect is stronger in reading,  it moves to the previous word in rep1 and goes back to the target in rep 3.
+
+
+
+
+There is an effect at the target word and the effect seems even larger and involve also the previous word (the noun) in repetition 1,  in repetition 2 the effect seems to be largely reduced.
+
+
+
+```{r vio-sy-stat, include = TRUE, echo = TRUE}
+sysh = subset(sy, wp %in% c(1,2,3))
+sysh$wp = factor(sysh$wp)
+
+
+l = lmer(lrt~rep*cond*wp + (1|item) + (1|scode), data = sysh)
+plot_model(l, type='pred', terms=c('wp', 'cond','rep'))
+summary(l)
+
+```
+
+Strong effects of violation during reading emerge on wp2 (target) and as spillover (wp3). Also the interactions  with repetition above described on the explorative plots emerge clearly at a statistical level. 
+
+
+We also run the analysis on target word only.
+
+```{r vio-sy-target, include = TRUE, echo = TRUE}
+sy2 = subset(sy, wp == 2)
+
+l = lmer(lrt~rep*cond + (1|item) + (1|scode), data = sy2)
+plot_model(l, type='pred', terms=c('rep','cond'))
+summary(l)
+
+```
+
+In this analysis the effect of violation emerges clearly but it does not significantly interact with repetition. The cost persists across repetitions.
+
+# Single subject estimates
+
+The more relvant interactions of repetitions which may be analyzed at single subject level is:
+
+- for semantic violations the effects seems larger in repetion than in read,  to evaluate this we will cosider both wp1 and w2 collapsing data across the two levels of wp
+
+- for syntactic violation is the interaction between pre-target and target which changes fron read to repetition1
+
+For these reason we will limit the analysis to the first repetition only and the target and pretarget words. For semantic condition we will not consider reading but only repetition1.
+
+Before running models at the single subject level we run these analyses in the group.
+
+The interesting fact that in rep2 the pattern of syntactic violation returns similar to the read condition is very interesting but hard to quantify at this stage of the research.
+
+
+```{r vio-2words, include = TRUE, echo = TRUE}
+sy2w = subset(sy, wp %in% c(1,2) & rep!='rep2')
+se2w = subset(se, wp %in% c(1,2) & rep=='rep1')
+
+sem = lmer(lrt~cond + (1|item) + (1|scode), data = se2w)
+sym = lmer(lrt~rep*cond*wp + (1|item) + (1|scode), data = sy2w)
+
+summary(sem)
+plot_model(sem, type='pred', terms=c('cond'))
+summary(sym)
+plot_model(sym, type='pred', terms=c('rep','cond','wp'))
+
+```
+
+
+# Syntactic interaction
+
+
+Since the overall model is singular for many subjects we esitimate separately at single subject level the effect of violation during reading at wp2 (target) during reading and at wp1 (pre-target)  during 1st repetition, using simple linear models.
+
+```{r vio-ss-sy, include = TRUE, echo = TRUE}
+
+syt_2 = subset(sy, wp==2 & rep=='read')
+syp_1 = subset(sy, wp==1 & rep=='rep1')
+
+
+out = data.frame()
+for (i in levels(syt_2$scode)) { 
+	sb = subset(syt_2, scode ==i)
+	tmp = lm(lrt~cond, data=sb)
+	sm = summary(tmp)
+	h =  data.frame(sm$coefficients)
+	h$term = c('int','vio')
+	h$scode = i
+	h$listType = sb$listType[1]
+        h$age = sb$age[1]
+	out = rbind(out,h)
+
+}
+
+out$upper = out$Estimate + out$Std..Error
+out$lower = out$Estimate - out$Std..Error
+
+a = subset(out, term =='vio', select=c('scode','age', 'listType', 'Estimate', 'lower','upper'))
+colnames(a)[4:6] =c('tarRead','tarRead.l', 'tarRead.h')
+
+
+out = data.frame()
+for (i in levels(syp_1$scode)) { 
+	sb = subset(syp_1, scode ==i)
+	tmp = lm(lrt~cond, data=sb)
+	sm = summary(tmp)
+	h =  data.frame(sm$coefficients)
+	h$term = c('int','vio')
+	h$scode = i
+	h$listType = sb$listType[1]
+        h$age = sb$age[1]
+	out = rbind(out,h)
+}
+
+out$upper = out$Estimate + out$Std..Error
+out$lower = out$Estimate - out$Std..Error
+
+b = subset(out, term =='vio', select=c('scode','age', 'listType', 'Estimate', 'lower','upper'))
+colnames(b)[4:6] =c('preRep','preRep.l', 'preRep.h')
+
+
+e = merge(a,b)
+
+ggplot(e, aes(x=tarRead, y=scode, xmin=tarRead.l, xmax=tarRead.h, color=listType) ) + geom_point( size=4, shape=16) +
+   geom_errorbar()  +  theme_bw() + ggtitle('Estimate of violation effect at target (verb, wp=2) during reading') +
+   geom_vline(xintercept = 0, size=1) +
+   xlab ('violation effect [log(ms)]') +
+   ylab ("Subject's codes")
+
+
+ggplot(e, aes(x=preRep, y=scode, xmin=preRep.l, xmax=preRep.h,color=listType)) + geom_point( size=4, shape=16) +
+   geom_errorbar()  +  theme_bw() + ggtitle('Estimate of violation effect at the pretarget (noun, wp=1) in the first repetition') +
+   geom_vline(xintercept = 0, size=1) +
+   xlab ('violation effect [log(ms)]') +
+   ylab ("Subject's codes")
+
+ggplot(e, aes(x=tarRead,  y=preRep, label=scode, color=listType) ) + geom_point(size=4, shape=16) +  
+   geom_errorbar(e, mapping=aes(y=preRep, xmin=tarRead.l, xmax=tarRead.h)) +
+   geom_errorbar(e, mapping=aes(x=tarRead, ymin=preRep.l, ymax=preRep.h)) +
+   geom_hline(yintercept = 0, size=1) +
+   geom_vline(xintercept = 0, size=1) + geom_label() + theme_bw() +
+   xlab('Violation effect on the target during reading') +
+   ylab('Violation effect on the pre-target during repetition 1') +
+   ggtitle('Combined sungle subject estimates of main syntactic violation effects on reading and repeating' )
+
+```
+
+It is interesting that for most subject both effect emerge (most points in the 1st quadrant) but these are not strongly linear, seemling rather independent in magnitude.
+
+Three subjecs do not show either of the effects. EBQ  is a subject very fast in performing the task (already seen in the word frequency analysis as an "outlier" subject). ALD shows a clear and significant effect on reading but no effect on the pretarget on repeating,  SGC the opposite effect.  We will plot raw data for a qualitative analysis of their behaviour.
+
+
+
+ald = subset(sy, scode=='ALD')
+```{r vio-ssraw-sy, include = TRUE, echo = TRUE}
+
+ggplot(ald, aes(x=factor(wp), y=rt, color=cond))+ geom_boxplot() +
+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(ald$rep) + 
+ ggtitle('Syntactic violation: ALD subject')
+
+sgc = subset(sy, scode=='SGC')
+ggplot(sgc, aes(x=factor(wp), y=rt, color=cond))+ geom_boxplot() +
+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(sgc$rep) +
+ ggtitle('Syntactic violation: SGC subject')
+
+ebq = subset(sy, scode=='EBQ')
+ggplot(ebq, aes(x=factor(wp), y=rt, color=cond))+ geom_boxplot() +
+ geom_jitter(width=0.2, height=0, size=0.3) + facet_wrap(ebq$rep) +
+ ggtitle('Syntactic violation: EBQ subject')
+ 
+``` 
+
+
+SGC  shows the slow-downs in reading not on the target but on the spillover, probably bacause he is very  fast.
+
+EBQ does not show signs of costs for violations.
+
+ALD interesting shows the cost during reading but no cost on the pre-target during repeating. Even if the control condition seems rather slow (probably by random noise) the RT for all violation in the pre-target seem rather fast,  suggesting that the violation does not interfere much with the RT of the subject of the sentence (this is interesting and it is the pattern we expect for people that do not have a strong syntactic representation of the sentence in WM...)
+
+
+# Semantic violation in repetition1 across subjects
+
+
+
+sem = lmer(lrt~cond + (1|item) + (1|scode), data = se2w)
+
+
+
+```{r vio-ss-se, include = TRUE, echo = TRUE}
+
+se2w = subset(se, wp %in% c(1,2) & rep=='rep1')
+
+
+out = data.frame()
+for (i in levels(se2w$scode)) { 
+	sb = subset(se2w, scode ==i)
+	tmp = lm(lrt~cond, data=sb)
+	sm = summary(tmp)
+	h =  data.frame(sm$coefficients)
+	h$term = c('int','vio')
+	h$scode = i
+	h$listType = sb$listType[1]
+        h$age = sb$age[1]
+	out = rbind(out,h)
+}
+
+out$upper = out$Estimate + out$Std..Error
+out$lower = out$Estimate - out$Std..Error
+
+a = subset(out, term =='vio', select=c('scode','age', 'listType', 'Estimate', 'lower','upper'))
+colnames(a)[4:6] =c('semRep','semRep.l', 'semRep.h')
+
+
+
+ggplot(a, aes(x=semRep, y=scode, xmin=semRep.l, xmax=semRep.h, color=listType) ) + geom_point( size=4, shape=16) +
+   geom_errorbar()  +  theme_bw() + ggtitle('Estimate of semantic violation effect in repetition 1') +
+   geom_vline(xintercept = 0, size=1) +
+   xlab ('violation effect [log(ms)]') +
+   ylab ("Subject's codes")
+
+ 
+``` 
+
+
+The effect seems to be there at least numerically for most subjects, rather independently from list.   We will plot raw data for a qualitative inspection of the four subjects who does show the effect in the opposite way.
+
+
+
+```{r vio-ss-raw-se, include = TRUE, echo = TRUE}
+
+
+
+tmp = subset(se, scode %in% c('RDU','QOL', 'PGG', 'OKZ'))
+
+ggplot(tmp, aes(x=factor(wp), y=rt, color=cond))+ geom_boxplot() +
+  geom_jitter(width=0.2, height=0, size=0.3) + facet_grid(tmp$rep~tmp$scode) +
+  ggtitle(paste('Semantic violation: ',s,'subject'))
+
+```
+
+All three subject does not seem so sensitive to semantic violation either in reading or in repeating, with the exception of some possible spillover on wp4 for QOL in reading.
+
+By checking how these subject perform with frequency effect in the regular sentences QOL behaved differently from other subjects also in that analysis (one of the one who showed larger frequency effect in repetition1),  this second evidence converges in suggesting a less strong memory effect for lexical semantic aspects. Note that QOL does not show clearly different behaviour in the syntactic violations. Similar observations for ALD and ABQ which seems odd in the syntactic measures and do not show abnormal values in the semantic measures.  I think these observations suggest that the different indexes extracted by the task could differentiate strengths and weakness in different aspects of WM  for sentences. 
